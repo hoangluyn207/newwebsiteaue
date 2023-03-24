@@ -8,7 +8,12 @@ import image from "../../image/backgroundFooter.png";
 
 const Footer = () => {
   return (
-    <VStack width={"100%"} display={"flex"} justifyContent={"center"}>
+    <VStack
+      width={"100%"}
+      display={"flex"}
+      justifyContent={"center"}
+      paddingTop="128px"
+    >
       <HStack
         width={"1280px"}
         display={"flex"}

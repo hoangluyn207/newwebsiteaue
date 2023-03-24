@@ -2,6 +2,7 @@ import { Box, Image, VStack } from "@chakra-ui/react";
 import React from "react";
 import EquipmentContainer from "../Homepage/EquipmentContainer";
 import InfoContainer from "../Homepage/InfoContainer";
+import PartnerContainer from "../Homepage/PartnerContainer";
 import SolutionContainer from "../Homepage/SolutionContainer";
 
 const Homepage = () => {
@@ -17,6 +18,7 @@ const Homepage = () => {
       <InfoContainer />
       <SolutionContainer />
       <EquipmentContainer />
+      <PartnerContainer />
     </VStack>
   );
 };

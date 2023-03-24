@@ -6,8 +6,8 @@ import { VStack } from "@chakra-ui/react";
 
 const Layout = () => {
   return (
-    <VStack position={"relative"} width={"full"} backgroundColor="#fff">
-      <Header position="absolute" top="0px" />
+    <VStack width={"full"} backgroundColor="#fff">
+      <Header />
       <Outlet />
       <Footer />
     </VStack>

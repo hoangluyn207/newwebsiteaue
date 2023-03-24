@@ -9,7 +9,13 @@ const SolutionContainer = () => {
         position="relative"
         background="#ffffff"
         height="300px"
-        boxShadow="20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff"
+        borderWidth={"1px"}
+        borderColor="#ccc"
+        borderRadius={"8px"}
+        transition="0.5s"
+        _hover={{
+          boxShadow: "20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff",
+        }}
       >
         <Text position={"absolute"} bottom="20px">
           {Title}
@@ -24,6 +30,7 @@ const SolutionContainer = () => {
       display={"flex"}
       justifyContent="center"
       position={"relative"}
+      paddingBottom="128px"
     >
       <Image
         width={"full"}
@@ -58,7 +65,7 @@ const SolutionContainer = () => {
         display={"flex"}
         justifyContent="space-between"
         width={"1280px"}
-        padding="32px"
+        padding="128px 32px 0px 32px"
       >
         <Card Title={"EMS"} />
         <Card Title={"BMS"} />

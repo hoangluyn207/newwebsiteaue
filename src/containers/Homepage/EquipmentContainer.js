@@ -64,14 +64,14 @@ const EquipmentContainer = () => {
       />
       <VStack
         display={"flex"}
-        alignItems="flex-start"
-        textAlign={"left"}
+        alignItems="flex-end"
+        textAlign={"right"}
         top="10%"
-        right={0}
+        left={0}
         textColor={"white"}
         width="50%"
         position={"absolute"}
-        paddingLeft="36px"
+        paddingRight="36px"
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
           SẢN PHẨM
@@ -84,7 +84,7 @@ const EquipmentContainer = () => {
         </Text>
       </VStack>
       <HStack
-        padding={"32px"}
+        padding={"128px 32px"}
         height={"full"}
         width={"1280px"}
         spacing={"32px"}

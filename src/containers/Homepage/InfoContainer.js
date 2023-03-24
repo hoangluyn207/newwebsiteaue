@@ -35,7 +35,7 @@ const InfoContainer = () => {
   return (
     <HStack
       width={"1280px"}
-      padding="32px"
+      padding="128px 32px"
       display={"flex"}
       justifyContent="space-between"
     >
