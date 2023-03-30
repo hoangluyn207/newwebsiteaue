@@ -1,0 +1,52 @@
+.BoxCard {
+  width: 30%;
+}
+
+.SocialMedia {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(-200%);
+  z-index: 3;
+}
+
+.Icon {
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.BoxCard:hover:hover {
+  box-shadow: 1px 2px 10px rgba(35, 35, 35, 0.5);
+}
+
+.BoxCard:hover .CardImage {
+  filter: brightness(50%);
+}
+
+.BoxCard:hover .SocialMedia .Icon {
+  transform: translateY(-5%);
+  background-color: transparent;
+  opacity: 1;
+}
+
+.BoxCard:hover .SocialMedia .Icon1 {
+  transition-delay: 0s;
+}
+
+.BoxCard:hover .SocialMedia .Icon2 {
+  transition-delay: 0.1s;
+}
+
+.BoxCard:hover .SocialMedia .Icon3 {
+  transition-delay: 0.2s;
+}
+
+/* .BoxCard:hover .ItemCard {
+  display: block;
+} */
