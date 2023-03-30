@@ -8,23 +8,26 @@ const TextField = ({ Label, w, h }) => {
   const styleLabel = {
     position: "absolute",
     top: "0.2ex",
-    zIndex: "1",
+    zIndex: "2",
     left: "2em",
     backgroundColor: "white",
     padding: "0 5px",
+    color: "#0099cc",
   };
   const styleInput = {
     border: "1px solid gray",
     borderRadius: "6px",
     position: "relative",
     width: w,
+    padding: "4px 8px",
     margin: "10px",
     lineHeight: h,
+    paddingRight: "8px",
   };
   return (
     <div style={styleDiv}>
       <label style={styleLabel}>{Label}</label>
-      <input style={styleInput} type="text" />
+      <Input style={styleInput} type="text" />
     </div>
   );
 };
