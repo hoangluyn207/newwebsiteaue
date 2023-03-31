@@ -98,7 +98,7 @@ const ProjectContainer = () => {
             <Text padding={"8px 16px"}>Title</Text>
           </VStack>
         </SwiperSlide>
-        <SwiperSlide width={"full"}>
+        <SwiperSlide width={"full"} className="container">
           <VStack
             width={"full"}
             height="full"
@@ -108,6 +108,7 @@ const ProjectContainer = () => {
           >
             <Box height="320px" width="100%" overflow={"hidden"}>
               <Image
+                className="icon"
                 transition={"0.5s"}
                 src="/image/project/lvs3.jpg"
                 _hover={{ transform: "scale(1.2)" }}
