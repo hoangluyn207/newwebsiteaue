@@ -26,7 +26,7 @@ const ProductContainer = () => {
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
             className="Image"
-            width={"300px"}
+            height={"350px"}
             src="/image/robot.png"
             top={"-100px"}
             transition={"0.5s"}
@@ -55,7 +55,7 @@ const ProductContainer = () => {
           position={"relative"}
         >
           <Image
-            width={"250px"}
+            height={"350px"}
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
             className="Image"
