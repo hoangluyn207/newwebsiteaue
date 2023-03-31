@@ -7,12 +7,14 @@ import Solution from "./containers/pages/Solution";
 import AboutUs from "./containers/pages/AboutUs";
 import Project from "./containers/pages/Project";
 import { ChakraProvider } from "@chakra-ui/react";
+import ScrollToTop from "./scrollToTop";
 
 function App() {
   return (
     <div className="App">
       <ChakraProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Homepage />} />
