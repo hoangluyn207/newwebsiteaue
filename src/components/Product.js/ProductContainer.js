@@ -32,8 +32,8 @@ const ProductContainer = () => {
             transition={"0.5s"}
           />
           <Box position={"absolute"} bottom="0px">
-            <div class="buttons">
-              <button class="btn">
+            <div className="buttons">
+              <button className="btn">
                 <span></span>
                 <p
                   data-start="good luck!"
@@ -64,8 +64,8 @@ const ProductContainer = () => {
             transition={"0.5s"}
           />
           <Box position={"absolute"} bottom="0px">
-            <div class="buttons">
-              <button class="btn">
+            <div className="buttons">
+              <button className="btn">
                 <span></span>
                 <p
                   data-start="good luck!"

@@ -1,6 +1,6 @@
 import { Box, HStack, IconButton, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import FA from "../../icons/FA";
+import Tamnhin from "../../icons/Tamnhin";
 import Solution from "../../icons/Solution";
 import PowerDistributon from "../../icons/PowerDistributon";
 
@@ -69,24 +69,24 @@ const InfoContainer = () => {
       <HStack height={"full"} width={"50%"} spacing={"32px"}>
         <VStack width={"50%"} spacing={"32px"}>
           <CirclePubble
-            title={"Factory Automation"}
+            title={"Tầm nhìn"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-            icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
+            icon={<Tamnhin />}
           />
           <CirclePubble
-            title={"Solution"}
+            title={"Nhiệm vụ"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             icon={<Solution color={"#0099cc"} />}
           />
         </VStack>
         <VStack width={"50%"} spacing={"32px"}>
           <CirclePubble
-            title={"Power Distributon"}
+            title={"Giá trị cốt lõi"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             icon={<PowerDistributon color={"#0099cc"} />}
           />
           <CirclePubble
-            title={"Factory Automation"}
+            title={"Sứ mệnh"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             icon={<PowerDistributon color={"#0099cc"} />}
           />
