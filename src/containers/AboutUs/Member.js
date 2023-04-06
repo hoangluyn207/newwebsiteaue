@@ -1,11 +1,52 @@
 import React from "react";
-import { HStack, Box, Image, IconButton } from "@chakra-ui/react";
+import { HStack, Box, Image, IconButton, VStack, Text } from "@chakra-ui/react";
 import Css from "./Member.module.css";
 import FacebookIcon36x36 from "../../icons/FacebookIcon36x36";
 import LinkedIn from "../../icons/LinkedIn";
 import ZaloIcon36x36 from "../../icons/ZaloIcon36x36";
+import Phone from "../../icons/Phone";
+import Email from "../../icons/Email";
 
 const Member = () => {
+  const BoxCard2 = ({ name, phone, mail, img, position }) => {
+    return (
+      <HStack
+        boxShadow="20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff"
+        padding={"16px 32px"}
+        spacing={"16px"}
+      >
+        <Image
+          src={img}
+          width={"100px"}
+          height={"100px"}
+          borderRadius={"100%"}
+          objectFit={"cover"}
+        />
+        <VStack
+          width={"300px"}
+          alignItems={"flex-start"}
+          textAlign={"left"}
+          spacing={"8px"}
+        >
+          <Text fontWeight={600} fontSize={"18px"}>
+            {name}
+          </Text>
+          <Text fontSize={"16px"}>{position}</Text>
+          <VStack spacing={"6px"} alignItems={"flex-start"} textAlign={"left"}>
+            <HStack alignItems={"flex-start"} textAlign={"left"}>
+              <Phone color={"#0099cc"} />
+              <Text>{phone}</Text>
+            </HStack>
+            <HStack alignItems={"flex-start"} textAlign={"left"}>
+              <Email color={"#0099cc"} />
+              <Text>{mail}</Text>
+            </HStack>
+          </VStack>
+        </VStack>
+      </HStack>
+    );
+  };
+
   const BoxCard = () => {
     return (
       <Box className={Css.BoxCard} position={"relative"}>
@@ -35,17 +76,109 @@ const Member = () => {
     );
   };
   return (
-    <HStack
-      width={"1280px"}
-      display="flex"
-      paddingTop={"128px"}
-      paddingBottom={"128px"}
-      justifyContent="space-between"
-    >
-      <BoxCard />
-      <BoxCard />
-      <BoxCard />
-    </HStack>
+    <VStack spacing={"48px"} padding={" 68px 32px"}>
+      <HStack width={"1280px"} display="flex" justifyContent="space-around">
+        <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"NGUYỄN QUANG VŨ"}
+          phone={"0905.998.598"}
+          mail={"quangvu.nguyen@auevn.com"}
+          position={"Giám đốc"}
+        />
+        <BoxCard2
+          img={"/image/Trần Quốc Tuấn.jpg"}
+          name={"Trần Quốc Tuấn"}
+          phone={"0979.301.422"}
+          mail={"tran.quoctuan@auevn.com"}
+          position={"Phó giám đốc"}
+        />
+      </HStack>
+      <HStack width={"1280px"} display="flex" justifyContent="space-around">
+        <BoxCard2
+          img={"/image/Ngô Thị Hiền.jpg"}
+          name={"Ngô Thị Hiền"}
+          phone={"0905.997.598"}
+          mail={"thihien.ngo@auevn.com"}
+          position={"Kế toán"}
+        />
+        {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Nguyễn Thị Kim Hạnh"}
+          phone={"0905.997.598"}
+          mail={"kimhanh.nguyen@auevn.com"}
+          position={"Kế toán"}
+        /> */}
+        <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Lương Phước Minh Hoàng"}
+          phone={"0905.583.598"}
+          mail={"minhhoang.luongphuoc@auevn.com"}
+          position={"Sale"}
+        />
+      </HStack>
+      <HStack width={"1280px"} display="flex" justifyContent="space-around">
+        <BoxCard2
+          img={"/image/Nguyễn Thị Ánh.jpg"}
+          name={"Nguyễn Thị Ánh"}
+          phone={"0906.567.598"}
+          mail={"anh.nguyen@auevn.com"}
+          position={"Sale Admin"}
+        />
+        {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Nguyễn Thị Phương Thảo"}
+          phone={"0905.996.598"}
+          mail={"phuongthao.nguyen@auevn.com"}
+          position={"Sale"}
+        /> */}
+        <BoxCard2
+          img={"/image/Nguyễn NGọc Khánh.JPG"}
+          name={"Nguyễn Ngọc Khánh"}
+          phone={"0905.543.598"}
+          mail={"ngockhanh.nguyen@auevn.com"}
+          position={"Phòng mua hàng"}
+        />
+
+        {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Đỗ Uyễn My"}
+          phone={"0905.878.598"}
+          mail={"uyenmy.do@auevn.com"}
+          position={"Phòng mua hàng"}
+        /> */}
+      </HStack>
+      <HStack width={"1280px"} display="flex" justifyContent="space-around">
+        {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Nguyễn Hồng Lam"}
+          phone={"0961.055.290"}
+          mail={"honglam.nguyen@auevn.com"}
+          position={"Phòng mua hàng"}
+        /> */}
+        <BoxCard2
+          img={"/image/Nguyễn Khương Quỳnh.jpg"}
+          name={"Nguyễn Khương Quỳnh"}
+          phone={"0905.677.598"}
+          mail={"khuongquynh.nguyen@auevn.com"}
+          position={"Phòng kỹ thuật"}
+        />
+        {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Trương Phước Lực"}
+          phone={"0905.566.598"}
+          mail={"phuocluc.truong@auevn.com"}
+          position={"Phòng kỹ thuật"}
+
+        /> */}
+        <BoxCard2
+          img={"/image/Huỳnh Thị Thanh Hằng.JPG"}
+          name={"Huỳnh Thị Thanh Hằng"}
+          phone={"0777.961.912"}
+          mail={"thanhhang.huynh@auevn.com"}
+          position={"Phòng hành chính nhân sự"}
+        />
+      </HStack>
+    </VStack>
   );
 };
 
