@@ -1,8 +1,9 @@
-import { Box, HStack, IconButton, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, IconButton, Text, VStack, Image } from "@chakra-ui/react";
 import React from "react";
 import Tamnhin from "../../icons/Tamnhin";
-import Solution from "../../icons/Solution";
-import PowerDistributon from "../../icons/PowerDistributon";
+import Giatricotloi from "../../icons/Giatricotloi";
+import Nhiemvu from "../../icons/Nhiemvu";
+import Chungnhan from "../../icons/Chungnhan";
 
 const InfoContainer = () => {
   const CirclePubble = ({ icon, title, content }) => {
@@ -17,13 +18,16 @@ const InfoContainer = () => {
       >
         <IconButton
           width={"150px"}
-          icon={icon}
+          height={"150px"}
+          icon={icon ? icon : null}
           background="transparent"
           cursor="default"
           _hover={{
             background: "transparent",
           }}
-        ></IconButton>
+        >
+          {icon ? null : <Image src="/logo/chungnhan.png" width={"44px"} />}
+        </IconButton>
         <VStack display={"flex"} alignItems={"flex-start"} textAlign="left">
           <Text fontWeight={"600"}>{title}</Text>
           <Text fontSize={"14px"}>{content}</Text>
@@ -56,14 +60,14 @@ const InfoContainer = () => {
         <Text fontWeight={"600"}>Chúng tôi là ai?</Text>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text evermáy in ảnh mini
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          evermáy in ảnh mini since the 1500s, when an unknown printer took a
+          galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. It was popularised in
+          the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages, and more recently with desktop publishing software like
+          Aldus PageMaker including versions of Lorem Ipsum.
         </Text>
       </VStack>
       <HStack height={"full"} width={"50%"} spacing={"32px"}>
@@ -76,19 +80,18 @@ const InfoContainer = () => {
           <CirclePubble
             title={"Nhiệm vụ"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-            icon={<Solution color={"#0099cc"} />}
+            icon={<Nhiemvu />}
           />
         </VStack>
         <VStack width={"50%"} spacing={"32px"}>
           <CirclePubble
             title={"Giá trị cốt lõi"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-            icon={<PowerDistributon color={"#0099cc"} />}
+            icon={<Giatricotloi />}
           />
           <CirclePubble
-            title={"Sứ mệnh"}
+            title={"Chứng nhận"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-            icon={<PowerDistributon color={"#0099cc"} />}
           />
         </VStack>
       </HStack>

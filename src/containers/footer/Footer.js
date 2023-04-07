@@ -79,6 +79,7 @@ const Footer = () => {
         <Box width={"100%"} display={"flex"} justifyContent={"center"}>
           <Image
             position={"absolute"}
+            width={"100vw"}
             bottom="0"
             right={0}
             opacity={"20%"}

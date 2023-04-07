@@ -97,7 +97,7 @@ const EquipmentContainer = () => {
         <CirclePubble
           title={"Power Distributon"}
           content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-          icon={<PowerDistributon color={"#0099cc"} />}
+          icon={<PowerDistributon />}
         />
       </HStack>
     </VStack>
