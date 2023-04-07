@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, HStack, VStack, Image, Text, Button } from "@chakra-ui/react";
 import "./ProductContainer.css";
 import ButtonChangeText from "../Button/ButtonChangeText";
 
 const ProductContainer = () => {
+  const [stateProduct, setStateProduct] = useState("");
+
   return (
     <Box
       width="1280px"
       display={"flex"}
       justifyContent="center"
       paddingTop={"128px"}
+      transition={"0.5s"}
     >
       <HStack width={"full"} justifyContent="space-around">
         <VStack
           width={"400px"}
           height="400px"
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
-          display={"flex"}
+          display={
+            stateProduct === null
+              ? "flex"
+              : stateProduct === "FA"
+              ? "none"
+              : "flex"
+          }
           justifyContent="center"
           transition={"0.5s"}
           className="BoxCard"
@@ -33,7 +42,12 @@ const ProductContainer = () => {
           />
           <Box position={"absolute"} bottom="0px">
             <div className="buttons">
-              <button className="btn">
+              <button
+                className="btn"
+                onClick={() => {
+                  setStateProduct("PD");
+                }}
+              >
                 <span></span>
                 <p
                   data-start="good luck!"
@@ -48,7 +62,13 @@ const ProductContainer = () => {
           width={"400px"}
           height="400px"
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
-          display={"flex"}
+          display={
+            stateProduct === null
+              ? "flex"
+              : stateProduct === "PD"
+              ? "none"
+              : "flex"
+          }
           justifyContent="center"
           transition={"0.5s"}
           className="BoxCard"
@@ -65,7 +85,12 @@ const ProductContainer = () => {
           />
           <Box position={"absolute"} bottom="0px">
             <div className="buttons">
-              <button className="btn">
+              <button
+                onClick={() => {
+                  setStateProduct("FA");
+                }}
+                className="btn"
+              >
                 <span></span>
                 <p
                   data-start="good luck!"

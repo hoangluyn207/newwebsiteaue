@@ -1,11 +1,22 @@
 import { Box, HStack, Image, VStack, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SolutionContainer = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const Card = ({ Title }) => {
     return (
       <VStack
-        width={"20%"}
+        width={isMobile ? "50%" : "20%"}
         position="relative"
         background="#ffffff"
         height="300px"
@@ -30,7 +41,7 @@ const SolutionContainer = () => {
       display={"flex"}
       justifyContent="center"
       position={"relative"}
-      paddingBottom="128px"
+      paddingBottom={isMobile ? 0 : "128px"}
     >
       <Image
         width={"full"}
@@ -45,33 +56,46 @@ const SolutionContainer = () => {
         alignItems="flex-start"
         textAlign={"left"}
         top="10%"
-        right={0}
+        right={isMobile ? null : 0}
         textColor={"white"}
-        width="50%"
+        width={isMobile ? "100%" : "50%"}
         position={"absolute"}
         paddingLeft="36px"
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
           GIẢI PHÁP
         </Text>
-        <Text width={"60%"}>
+        <Text width={isMobile ? "100%" : "60%"}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </Text>
       </VStack>
-      <HStack
-        display={"flex"}
-        justifyContent="space-between"
-        width={"1280px"}
-        padding="128px 32px 0px 32px"
-      >
-        <Card Title={"EMS"} />
-        <Card Title={"BMS"} />
-        <Card Title={"Scada"} />
-        <Card Title={"Alarm Managerment"} />
-      </HStack>
+      {isMobile ? (
+        <VStack width={"100%"} padding="32px">
+          <HStack width={"100%"}>
+            <Card Title={"EMS"} />
+            <Card Title={"BMS"} />
+          </HStack>
+          <HStack width={"100%"}>
+            <Card Title={"Scada"} />
+            <Card Title={"Alarm Managerment"} />
+          </HStack>
+        </VStack>
+      ) : (
+        <HStack
+          display={"flex"}
+          justifyContent="space-between"
+          width={"1280px"}
+          padding="128px 32px 0px 32px"
+        >
+          <Card Title={"EMS"} />
+          <Card Title={"BMS"} />
+          <Card Title={"Scada"} />
+          <Card Title={"Alarm Managerment"} />
+        </HStack>
+      )}
     </VStack>
   );
 };

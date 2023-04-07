@@ -1,10 +1,21 @@
 import { Box, HStack, Image, VStack, Text, IconButton } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FA from "../../icons/FA";
 import Solution from "../../icons/Solution";
 import PowerDistributon from "../../icons/PowerDistributon";
 
 const EquipmentContainer = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const Card = ({ Title }) => {
     return (
       <VStack
@@ -67,39 +78,54 @@ const EquipmentContainer = () => {
         alignItems="flex-end"
         textAlign={"right"}
         top="10%"
-        left={0}
+        left={isMobile ? null : 0}
         textColor={"white"}
-        width="50%"
+        width={isMobile ? "100%" : "50%"}
         position={"absolute"}
         paddingRight="36px"
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
           SẢN PHẨM
         </Text>
-        <Text width={"60%"}>
+        <Text width={isMobile ? "100%" : "60%"}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </Text>
       </VStack>
-      <HStack
-        padding={"128px 32px"}
-        height={"full"}
-        width={"1280px"}
-        spacing={"32px"}
-      >
-        <CirclePubble
-          title={"Factory Automation"}
-          content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-          icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
-        />
-        <CirclePubble
-          title={"Power Distributon"}
-          content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-          icon={<PowerDistributon />}
-        />
-      </HStack>
+      {isMobile ? (
+        <VStack padding={"32px"} width={"100%"} spacing={"32px"}>
+          <CirclePubble
+            title={"Factory Automation"}
+            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
+          />
+          <CirclePubble
+            title={"Power Distributon"}
+            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            icon={<PowerDistributon />}
+          />
+        </VStack>
+      ) : (
+        <HStack
+          padding={"128px 32px"}
+          height={"full"}
+          width={"1280px"}
+          spacing={"32px"}
+        >
+          <CirclePubble
+            title={"Factory Automation"}
+            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
+          />
+          <CirclePubble
+            title={"Power Distributon"}
+            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            icon={<PowerDistributon />}
+          />
+        </HStack>
+      )}
     </VStack>
   );
 };
