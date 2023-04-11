@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   VStack,
   Text,
@@ -18,8 +18,11 @@ import TextField from "../../components/TextField";
 import ButtonJump from "../../components/Button/ButtonJump";
 import "./ButtonJump.css";
 import emailjs from "emailjs-com";
+import { MobileContext } from "../../components/MobileContext";
+import GoogleReCaptcha from "react-google-recaptcha";
 
 const ContactForm = () => {
+  const { isMobile } = useContext(MobileContext);
   const styleDiv = {
     position: "relative",
   };
@@ -36,7 +39,7 @@ const ContactForm = () => {
     border: "1px solid gray",
     borderRadius: "6px",
     position: "relative",
-    width: "200px",
+    width: isMobile ? "80vw" : "200px",
     padding: "4px 8px",
     margin: "10px",
     lineHeight: "36px",
@@ -83,70 +86,127 @@ const ContactForm = () => {
     <VStack
       as="form"
       backgroundColor={"white"}
-      width={"50%"}
+      width={isMobile ? "80vw" : "50%"}
       display={"flex"}
       justifyContent={"space-around"}
-      spacing={"16px"}
+      spacing={isMobile ? "0" : "16px"}
       padding="16px"
-      height={"400px"}
+      height={isMobile ? "700px" : "400px"}
       onSubmit={handleSubmit}
     >
       <Text textColor="#0099cc" fontWeight={"600"}>
         Liên lạc với chúng tôi
       </Text>
-      <HStack spacing={"16px"} justifyContent={"space-around"} width={"full"}>
-        <div style={styleDiv}>
-          <label style={styleLabel}>Họ tên</label>
-          <Input
-            id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            style={styleInput}
-            type="text"
-          />
-        </div>
-        <div style={styleDiv}>
-          <label style={styleLabel}>Email</label>
-          <Input
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            style={styleInput}
-            type="text"
-          />
-        </div>
-      </HStack>
-      <HStack spacing={"16px"} justifyContent={"space-around"} width={"full"}>
-        <div style={styleDiv}>
-          <label style={styleLabel}>Số điện thoại</label>
-          <Input
-            type="text"
-            id="sdt"
-            value={sdt}
-            onChange={(event) => setSdt(event.target.value)}
-            style={styleInput}
-          />
-        </div>
-        <div style={styleDiv}>
-          <label style={styleLabel}>Công ty</label>
-          <Input
-            id="cty"
-            value={cty}
-            onChange={(event) => setCty(event.target.value)}
-            style={styleInput}
-            type="text"
-          />
-        </div>
-      </HStack>
-      <Box width={"full"} padding={"10px"}>
+      {isMobile ? (
+        <>
+          <div style={styleDiv}>
+            <label style={styleLabel}>Họ tên</label>
+            <Input
+              id="name"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              style={styleInput}
+              type="text"
+            />
+          </div>
+          <div style={styleDiv}>
+            <label style={styleLabel}>Email</label>
+            <Input
+              id="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              style={styleInput}
+              type="text"
+            />
+          </div>
+          <div style={styleDiv}>
+            <label style={styleLabel}>Số điện thoại</label>
+            <Input
+              type="text"
+              id="sdt"
+              value={sdt}
+              onChange={(event) => setSdt(event.target.value)}
+              style={styleInput}
+            />
+          </div>
+          <div style={styleDiv}>
+            <label style={styleLabel}>Công ty</label>
+            <Input
+              id="cty"
+              value={cty}
+              onChange={(event) => setCty(event.target.value)}
+              style={styleInput}
+              type="text"
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          <HStack
+            spacing={"16px"}
+            justifyContent={"space-around"}
+            width={"full"}
+          >
+            <div style={styleDiv}>
+              <label style={styleLabel}>Họ tên</label>
+              <Input
+                id="name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                style={styleInput}
+                type="text"
+              />
+            </div>
+            <div style={styleDiv}>
+              <label style={styleLabel}>Email</label>
+              <Input
+                id="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                style={styleInput}
+                type="text"
+              />
+            </div>
+          </HStack>
+          <HStack
+            spacing={"16px"}
+            justifyContent={"space-around"}
+            width={"full"}
+          >
+            <div style={styleDiv}>
+              <label style={styleLabel}>Số điện thoại</label>
+              <Input
+                type="text"
+                id="sdt"
+                value={sdt}
+                onChange={(event) => setSdt(event.target.value)}
+                style={styleInput}
+              />
+            </div>
+            <div style={styleDiv}>
+              <label style={styleLabel}>Công ty</label>
+              <Input
+                id="cty"
+                value={cty}
+                onChange={(event) => setCty(event.target.value)}
+                style={styleInput}
+                type="text"
+              />
+            </div>
+          </HStack>
+        </>
+      )}
+
+      <Box width={isMobile ? "100vw" : "full"} padding={"10px"}>
         <Textarea
+          width={isMobile ? "80vw" : "90%"}
           id="message"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
           placeholder="Lời nhắn"
         />
       </Box>
-      <button type="submit" backgroundColor="white" className="button">
+      <button type="submit" backgroundcolor="white" className="button">
         Gửi yêu cầu
       </button>
     </VStack>

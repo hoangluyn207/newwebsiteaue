@@ -8,23 +8,26 @@ import AboutUs from "./containers/pages/AboutUs";
 import Project from "./containers/pages/Project";
 import { ChakraProvider } from "@chakra-ui/react";
 import ScrollToTop from "./scrollToTop";
+import { MobileContextProvider } from "./components/MobileContext";
 
 function App() {
   return (
     <div className="App">
       <ChakraProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Homepage />} />
-              <Route path="/sanpham" element={<Product />} />
-              <Route path="/giaiphap" element={<Solution />} />
-              <Route path="/duan" element={<Project />} />
-              <Route path="/thongtin" element={<AboutUs />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <MobileContextProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Homepage />} />
+                <Route path="/sanpham" element={<Product />} />
+                <Route path="/giaiphap" element={<Solution />} />
+                <Route path="/duan" element={<Project />} />
+                <Route path="/thongtin" element={<AboutUs />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </MobileContextProvider>
       </ChakraProvider>
     </div>
   );

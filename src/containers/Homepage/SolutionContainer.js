@@ -1,7 +1,17 @@
 import { Box, HStack, Image, VStack, Text } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SolutionContainer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -53,6 +63,7 @@ const SolutionContainer = () => {
         alt="Solution Homepage AUE VietNam"
       />
       <VStack
+        data-aos="fade-left"
         display={"flex"}
         alignItems="flex-start"
         textAlign={"left"}
@@ -86,6 +97,7 @@ const SolutionContainer = () => {
           justifyContent="space-between"
           width={"1280px"}
           padding="128px 32px 0px 32px"
+          data-aos="fade-up"
         >
           <Card Title={"EMS"} />
           <Card Title={"BMS"} />

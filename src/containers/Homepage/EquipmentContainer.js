@@ -3,8 +3,17 @@ import React, { useEffect, useState } from "react";
 import FA from "../../icons/FA";
 import Solution from "../../icons/Solution";
 import PowerDistributon from "../../icons/PowerDistributon";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const EquipmentContainer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -31,9 +40,10 @@ const EquipmentContainer = () => {
       </VStack>
     );
   };
-  const CirclePubble = ({ icon, title, content }) => {
+  const CirclePubble = ({ icon, title, content, ado }) => {
     return (
       <HStack
+        data-aos={ado}
         width={"full"}
         height="150px"
         background="#ffffff"
@@ -83,6 +93,7 @@ const EquipmentContainer = () => {
         width={isMobile ? "100%" : "50%"}
         position={"absolute"}
         paddingRight="36px"
+        data-aos="fade-right"
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
           SẢN PHẨM
@@ -115,11 +126,13 @@ const EquipmentContainer = () => {
           spacing={"32px"}
         >
           <CirclePubble
+            ado="fade-right"
             title={"Factory Automation"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
           />
           <CirclePubble
+            ado="fade-left"
             title={"Power Distributon"}
             content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             icon={<PowerDistributon />}

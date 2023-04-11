@@ -4,8 +4,18 @@ import Tamnhin from "../../icons/Tamnhin";
 import Giatricotloi from "../../icons/Giatricotloi";
 import Nhiemvu from "../../icons/Nhiemvu";
 import Chungnhan from "../../icons/Chungnhan";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const InfoContainer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -114,6 +124,7 @@ const InfoContainer = () => {
             display="flex"
             alignItems="flex-start"
             textAlign={"left"}
+            data-aos="fade-right"
           >
             <Text
               textAlign={"start"}
@@ -137,7 +148,12 @@ const InfoContainer = () => {
               Lorem Ipsum.
             </Text>
           </VStack>
-          <HStack height={"full"} width={"50%"} spacing={"32px"}>
+          <HStack
+            data-aos="fade-left"
+            height={"full"}
+            width={"50%"}
+            spacing={"32px"}
+          >
             <VStack width={"50%"} spacing={"32px"}>
               <CirclePubble
                 title={"Tầm nhìn"}

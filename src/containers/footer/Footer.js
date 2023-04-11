@@ -29,6 +29,7 @@ const Footer = () => {
     <>
       {isMobile ? (
         <VStack
+          margin={"0 !important"}
           width={"100vw"}
           display={"flex"}
           padding={"32px 16px"}
