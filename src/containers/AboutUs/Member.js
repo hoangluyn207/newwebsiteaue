@@ -217,14 +217,6 @@ const Member = () => {
             mail={"khuongquynh.nguyen@auevn.com"}
             position={"Phòng kỹ thuật"}
           />
-          <BoxCard2
-            ado={"fade-left"}
-            img={"/image/Huỳnh Thị Thanh Hằng.JPG"}
-            name={"Huỳnh Thị Thanh Hằng"}
-            phone={"0777.961.912"}
-            mail={"thanhhang.huynh@auevn.com"}
-            position={"Phòng hành chính nhân sự"}
-          />
         </VStack>
       ) : (
         <VStack spacing={"48px"} padding={"68px 32px"}>
