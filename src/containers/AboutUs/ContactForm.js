@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VStack,
   Text,
   HStack,
   Box,
   Textarea,
+  Input,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -15,10 +16,72 @@ import {
 } from "@chakra-ui/react";
 import TextField from "../../components/TextField";
 import ButtonJump from "../../components/Button/ButtonJump";
+import "./ButtonJump.css";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const styleDiv = {
+    position: "relative",
+  };
+  const styleLabel = {
+    position: "absolute",
+    top: "0.2ex",
+    zIndex: "2",
+    left: "2em",
+    backgroundColor: "white",
+    padding: "0 5px",
+    color: "#0099cc",
+  };
+  const styleInput = {
+    border: "1px solid gray",
+    borderRadius: "6px",
+    position: "relative",
+    width: "200px",
+    padding: "4px 8px",
+    margin: "10px",
+    lineHeight: "36px",
+    paddingRight: "8px",
+    height: "48px",
+    WebkitBoxShadow: "0 0 0 1000px white inset",
+    MozBoxShadow: "0 0 0 1000px white inset",
+    boxShadow: "0 0 0 1000px white inset",
+  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sdt, setSdt] = useState("");
+  const [cty, setCty] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    emailjs
+      .send(
+        "service_ft81knn",
+        "template_dom4df7",
+        {
+          from_name: name,
+          email: email,
+          company: cty,
+          message: message,
+        },
+        "058cDMXuQVQsiMWLX"
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(
+          "An error occurred while sending your message. Please try again later."
+        );
+      });
+  };
   return (
     <VStack
+      as="form"
       backgroundColor={"white"}
       width={"50%"}
       display={"flex"}
@@ -26,22 +89,66 @@ const ContactForm = () => {
       spacing={"16px"}
       padding="16px"
       height={"400px"}
+      onSubmit={handleSubmit}
     >
       <Text textColor="#0099cc" fontWeight={"600"}>
         Liên lạc với chúng tôi
       </Text>
       <HStack spacing={"16px"} justifyContent={"space-around"} width={"full"}>
-        <TextField Label={"Họ tên"} w="200px" h="36px" />
-        <TextField Label={"Email"} w="200px" h="36px" />
+        <div style={styleDiv}>
+          <label style={styleLabel}>Họ tên</label>
+          <Input
+            id="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            style={styleInput}
+            type="text"
+          />
+        </div>
+        <div style={styleDiv}>
+          <label style={styleLabel}>Email</label>
+          <Input
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            style={styleInput}
+            type="text"
+          />
+        </div>
       </HStack>
       <HStack spacing={"16px"} justifyContent={"space-around"} width={"full"}>
-        <TextField Label={"Số điện thoại"} w="200px" h="36px" />
-        <TextField Label={"Công ty"} w="200px" h="36px" />
+        <div style={styleDiv}>
+          <label style={styleLabel}>Số điện thoại</label>
+          <Input
+            type="text"
+            id="sdt"
+            value={sdt}
+            onChange={(event) => setSdt(event.target.value)}
+            style={styleInput}
+          />
+        </div>
+        <div style={styleDiv}>
+          <label style={styleLabel}>Công ty</label>
+          <Input
+            id="cty"
+            value={cty}
+            onChange={(event) => setCty(event.target.value)}
+            style={styleInput}
+            type="text"
+          />
+        </div>
       </HStack>
       <Box width={"full"} padding={"10px"}>
-        <Textarea placeholder="Lời nhắn" />
+        <Textarea
+          id="message"
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+          placeholder="Lời nhắn"
+        />
       </Box>
-      <ButtonJump backgroundColor="white" Label={"Gửi yêu cầu"} />
+      <button type="submit" backgroundColor="white" className="button">
+        Gửi yêu cầu
+      </button>
     </VStack>
   );
 };
