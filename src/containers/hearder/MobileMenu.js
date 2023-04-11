@@ -24,17 +24,17 @@ const MobileMenu = () => {
 
   return (
     <Box
-      display={{ base: "block", md: "none" }}
+      display={"block"}
       position={"fixed"}
       top="0"
       zIndex={10}
-      width={"100%"}
+      width={"100vw"}
       backgroundColor="white"
       margin={"0 !important"}
       boxShadow="0 0 10px #cccccc"
     >
       <Flex
-        width={"100%"}
+        width={"100vw"}
         height="54px"
         padding={"8px 32px"}
         display="flex"

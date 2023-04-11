@@ -20,7 +20,7 @@ const InfoContainer = () => {
   const CirclePubble = ({ icon, title, content }) => {
     return (
       <HStack
-        width={"full"}
+        width={isMobile ? "80vw" : "300px"}
         height="150px"
         background="#ffffff"
         boxShadow="20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff"
@@ -50,12 +50,13 @@ const InfoContainer = () => {
   return (
     <>
       {isMobile ? (
-        <VStack padding={"32px"}>
+        <VStack spacing={"32px"}>
           <VStack
-            width={"100%"}
+            width={"100vw"}
             display="flex"
             alignItems="flex-start"
             textAlign={"left"}
+            padding={"16px"}
           >
             <Text
               textAlign={"start"}
@@ -79,31 +80,27 @@ const InfoContainer = () => {
               Lorem Ipsum.
             </Text>
           </VStack>
-          <HStack height={"full"} width={"100%"} spacing={"32px"}>
-            <VStack width={"50%"} spacing={"32px"}>
-              <CirclePubble
-                title={"Tầm nhìn"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-                icon={<Tamnhin />}
-              />
-              <CirclePubble
-                title={"Nhiệm vụ"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-                icon={<Nhiemvu />}
-              />
-            </VStack>
-            <VStack width={"50%"} spacing={"32px"}>
-              <CirclePubble
-                title={"Giá trị cốt lõi"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-                icon={<Giatricotloi />}
-              />
-              <CirclePubble
-                title={"Chứng nhận"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
-              />
-            </VStack>
-          </HStack>
+          <VStack padding={"16px"} width={"100vw"} spacing={"32px"}>
+            <CirclePubble
+              title={"Tầm nhìn"}
+              content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              icon={<Tamnhin />}
+            />
+            <CirclePubble
+              title={"Nhiệm vụ"}
+              content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              icon={<Nhiemvu />}
+            />
+            <CirclePubble
+              title={"Giá trị cốt lõi"}
+              content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              icon={<Giatricotloi />}
+            />
+            <CirclePubble
+              title={"Chứng nhận"}
+              content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            />
+          </VStack>
         </VStack>
       ) : (
         <HStack

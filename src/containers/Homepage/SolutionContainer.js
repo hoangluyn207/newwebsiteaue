@@ -16,7 +16,7 @@ const SolutionContainer = () => {
   const Card = ({ Title }) => {
     return (
       <VStack
-        width={isMobile ? "50%" : "20%"}
+        width={isMobile ? "80%" : "20%"}
         position="relative"
         background="#ffffff"
         height="300px"
@@ -42,6 +42,7 @@ const SolutionContainer = () => {
       justifyContent="center"
       position={"relative"}
       paddingBottom={isMobile ? 0 : "128px"}
+      paddingTop={"16px"}
     >
       <Image
         width={"full"}
@@ -73,15 +74,11 @@ const SolutionContainer = () => {
         </Text>
       </VStack>
       {isMobile ? (
-        <VStack width={"100%"} padding="32px">
-          <HStack width={"100%"}>
-            <Card Title={"EMS"} />
-            <Card Title={"BMS"} />
-          </HStack>
-          <HStack width={"100%"}>
-            <Card Title={"Scada"} />
-            <Card Title={"Alarm Managerment"} />
-          </HStack>
+        <VStack width={"100%"} spacing={"16px"} padding="16px">
+          <Card Title={"EMS"} />
+          <Card Title={"BMS"} />
+          <Card Title={"Scada"} />
+          <Card Title={"Alarm Managerment"} />
         </VStack>
       ) : (
         <HStack
