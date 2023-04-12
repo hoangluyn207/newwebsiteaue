@@ -63,7 +63,7 @@ const SolutionContainer = () => {
         alt="Solution Homepage AUE VietNam"
       />
       <VStack
-        data-aos="fade-left"
+        data-aos={isMobile ? null : "fade-left"}
         display={"flex"}
         alignItems="flex-start"
         textAlign={"left"}

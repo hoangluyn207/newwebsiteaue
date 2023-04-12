@@ -93,7 +93,7 @@ const EquipmentContainer = () => {
         width={isMobile ? "100%" : "50%"}
         position={"absolute"}
         paddingRight="36px"
-        data-aos="fade-right"
+        data-aos={isMobile ? null : "fade-right"}
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
           SẢN PHẨM

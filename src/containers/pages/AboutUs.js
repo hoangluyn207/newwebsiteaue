@@ -7,7 +7,7 @@ import { MobileContext } from "../../components/MobileContext";
 const AboutUs = () => {
   const { isMobile } = useContext(MobileContext);
   return (
-    <VStack>
+    <VStack width={isMobile ? "100vw" : "full"}>
       <Image src="/image/AboutUs.JPG" width={isMobile ? "100vw" : "full"} />
       <Text
         fontSize={isMobile ? "24px" : "36px"}
