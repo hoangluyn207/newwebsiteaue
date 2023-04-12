@@ -7,6 +7,12 @@ import {
   VStack,
   Text,
   Avatar,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import Css from "./Member.module.css";
 import FacebookIcon36x36 from "../../icons/FacebookIcon36x36";
@@ -18,6 +24,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Member = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const handleImageClick = (src) => {
+    setSelectedImage(src);
+    setShowModal(true);
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -85,7 +99,13 @@ const Member = () => {
           </VStack>
         ) : (
           <>
-            <Avatar name={name} src={img} size={"2xl"} />
+            <Avatar
+              onClick={() => handleImageClick(img)}
+              name={name}
+              src={img}
+              size={"2xl"}
+            />
+
             {/* <Image
           src={img}
           width={isMobile ? "20%" : "100px"}
@@ -159,6 +179,15 @@ const Member = () => {
   };
   return (
     <>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)} size="xl">
+        <ModalOverlay css={{ backgroundColor: "rgba(0,0,0,0.5)" }} />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody>
+            <img src={selectedImage} />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
       {isMobile ? (
         <VStack spacing={"32px"} padding={"32px 16px"}>
           <BoxCard2

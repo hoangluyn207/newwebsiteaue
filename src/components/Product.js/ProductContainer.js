@@ -1,10 +1,25 @@
-import React, { useState } from "react";
-import { Box, HStack, VStack, Image, Text, Button } from "@chakra-ui/react";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Box,
+  HStack,
+  VStack,
+  Image,
+  Text,
+  Button,
+  IconButton,
+} from "@chakra-ui/react";
 import "./ProductContainer.css";
 import ButtonChangeText from "../Button/ButtonChangeText";
+import { FiX } from "react-icons/fi";
 
 const ProductContainer = () => {
   const [stateProduct, setStateProduct] = useState("");
+
+  // useEffect(() => {
+  //   if (stateProduct === "FA") {
+  //   } else {
+  //   }
+  // }, [stateProduct]);
 
   return (
     <Box
@@ -16,8 +31,8 @@ const ProductContainer = () => {
     >
       <HStack width={"full"} justifyContent="space-around">
         <VStack
-          width={"400px"}
-          height="400px"
+          width={stateProduct === "PD" ? "1280px" : "400px"}
+          height={stateProduct === "PD" ? "400px" : "400px"}
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
           display={
             stateProduct === null
@@ -31,7 +46,18 @@ const ProductContainer = () => {
           className="BoxCard"
           position={"relative"}
         >
+          <IconButton
+            display={stateProduct ? "flex" : "none"}
+            onClick={() => setStateProduct("")}
+            position={"absolute"}
+            top={0}
+            right={0}
+            zIndex={2}
+            backgroundColor={"transparent"}
+            icon={<FiX />}
+          />
           <Image
+            display={stateProduct === "PD" ? "none" : "flex"}
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
             className="Image"
@@ -40,7 +66,11 @@ const ProductContainer = () => {
             top={"-100px"}
             transition={"0.5s"}
           />
-          <Box position={"absolute"} bottom="0px">
+          <Box
+            display={stateProduct === "PD" ? "none" : "flex"}
+            position={"absolute"}
+            bottom="0px"
+          >
             <div className="buttons">
               <button
                 className="btn"
@@ -59,8 +89,8 @@ const ProductContainer = () => {
           </Box>
         </VStack>
         <VStack
-          width={"400px"}
-          height="400px"
+          width={stateProduct === "FA" ? "1280px" : "400px"}
+          height={stateProduct === "FA" ? "400px" : "400px"}
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
           display={
             stateProduct === null
@@ -74,7 +104,18 @@ const ProductContainer = () => {
           className="BoxCard"
           position={"relative"}
         >
+          <IconButton
+            display={stateProduct ? "flex" : "none"}
+            onClick={() => setStateProduct("")}
+            position={"absolute"}
+            top={0}
+            right={0}
+            zIndex={2}
+            backgroundColor={"transparent"}
+            icon={<FiX />}
+          />
           <Image
+            display={stateProduct === "FA" ? "none" : "flex"}
             height={"350px"}
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
@@ -83,7 +124,11 @@ const ProductContainer = () => {
             top={"-100px"}
             transition={"0.5s"}
           />
-          <Box position={"absolute"} bottom="0px">
+          <Box
+            display={stateProduct === "FA" ? "none" : "flex"}
+            position={"absolute"}
+            bottom="0px"
+          >
             <div className="buttons">
               <button
                 onClick={() => {

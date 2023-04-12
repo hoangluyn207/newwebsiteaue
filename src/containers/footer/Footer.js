@@ -33,11 +33,118 @@ const Footer = () => {
           width={"100vw"}
           display={"flex"}
           padding={"32px 16px"}
-          justifyContent={"center"}
           backgroundColor={"#2D2727"}
           textColor={"white"}
+          justifyContent={"flex-start"}
+          alignContent={"left"}
+          spacing={"32px"}
         >
-          <Box width={"100vw"}>
+          <VStack width={"full"} spacing={"16px"}>
+            <VStack
+              width={"full"}
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              textAlign={"left"}
+              spacing={"2px"}
+            >
+              <Text>
+                <u
+                  style={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "5px",
+                    textDecorationThickness: "2px",
+                  }}
+                >
+                  GIỚI THIỆU
+                </u>
+              </Text>
+            </VStack>
+            <VStack
+              width={"full"}
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              textAlign={"left"}
+              spacing={"2px"}
+            >
+              <Text>
+                <u
+                  style={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "5px",
+                    textDecorationThickness: "2px",
+                  }}
+                >
+                  DỰ ÁN
+                </u>
+              </Text>
+            </VStack>
+            <VStack
+              width={"full"}
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              textAlign={"left"}
+              spacing={"14px"}
+            >
+              <Text>
+                <u
+                  style={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "5px",
+                    textDecorationThickness: "2px",
+                  }}
+                >
+                  SẢN PHẨM
+                </u>
+              </Text>
+              <VStack
+                width={"full"}
+                paddingLeft={"8px"}
+                justifyContent={"flex-start"}
+                alignItems={"flex-start"}
+                textAlign={"left"}
+                spacing={"8px"}
+                textColor={"#ccc"}
+              >
+                <Text>Factory Automation</Text>
+                <Text>Power Distributon</Text>
+              </VStack>
+            </VStack>
+            <VStack
+              width={"full"}
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              textAlign={"left"}
+              spacing={"14px"}
+            >
+              <Text>
+                <u
+                  style={{
+                    textDecoration: "underline",
+                    textUnderlineOffset: "5px",
+                    textDecorationThickness: "2px",
+                  }}
+                >
+                  GIẢI PHÁP
+                </u>
+              </Text>
+              <VStack
+                width={"full"}
+                paddingLeft={"8px"}
+                justifyContent={"flex-start"}
+                alignItems={"flex-start"}
+                textAlign={"left"}
+                spacing={"8px"}
+                textColor={"#ccc"}
+              >
+                <Text>Giám sát năng lượng</Text>
+                <Text>Giám sát năng lượng</Text>
+                <Text>Giám sát năng lượng</Text>
+                <Text>Giám sát năng lượng</Text>
+              </VStack>
+            </VStack>
+          </VStack>
+
+          <Box width={"100vw"} justifyContent={"center"}>
             <Text fontWeight="bold" fontSize="18px">
               Công ty TNHH AUE Việt Nam
             </Text>

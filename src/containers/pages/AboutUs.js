@@ -27,7 +27,7 @@ const AboutUs = () => {
         justifyContent={"center"}
         spacing="0"
         boxShadow="20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff"
-        width={"1280px"}
+        width={isMobile ? "100vw" : "1280px"}
       >
         {isMobile ? null : (
           <Image width={"50%"} src="/image/AboutUs.JPG" height="full" />

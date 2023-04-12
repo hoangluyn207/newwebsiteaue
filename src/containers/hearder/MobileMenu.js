@@ -41,7 +41,9 @@ const MobileMenu = () => {
         justifyContent={"space-between"}
         alignItems="center"
       >
-        <Image height={"32px"} src={LogoAue} alt="Aue Viet Nam" />
+        <a href="./">
+          <Image height={"32px"} src={LogoAue} alt="Aue Viet Nam" />
+        </a>
         <IconButton
           aria-label="Open menu"
           size="md"

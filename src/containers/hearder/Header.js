@@ -40,7 +40,9 @@ const Header = (props) => {
             display="flex"
             justifyContent={"space-between"}
           >
-            <Image height={"32px"} src={LogoAue} alt="Aue Viet Nam" />
+            <a href="./">
+              <Image height={"32px"} src={LogoAue} alt="Aue Viet Nam" />
+            </a>
             <Menu />
           </HStack>
         </Box>
