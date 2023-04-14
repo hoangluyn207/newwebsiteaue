@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Member from "../AboutUs/Member";
 import ContactForm from "../AboutUs/ContactForm";
 import { MobileContext } from "../../components/MobileContext";
+import HisBus from "../AboutUs/HisBus";
 
 const AboutUs = () => {
   const { isMobile } = useContext(MobileContext);
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <Text fontSize={isMobile ? "16px" : "24px"}>
         Automation - Technology - Equipment
       </Text>
+      <HisBus />
       <Member />
       <HStack
         height={isMobile ? null : "400px"}

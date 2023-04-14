@@ -1,4 +1,4 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,8 +11,8 @@ const Menu = () => {
     return (
       <Link _hover={{ textDecoration: "none" }} to={link}>
         <Text
+          textColor={url === link ? "#0099cc" : "black"}
           _hover={{ textColor: "#0099cc", transition: "0.3s" }}
-          textColor={url === link ? "#0099cc" : "BLACK"}
         >
           {textLink}
         </Text>

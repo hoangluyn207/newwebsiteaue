@@ -8,9 +8,9 @@ import "aos/dist/aos.css";
 const EquipmentContainer = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 500,
       easing: "ease-in-out",
-      once: true,
+      once: false,
       mirror: false,
     });
   }, []);

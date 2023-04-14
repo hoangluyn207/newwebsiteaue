@@ -11,6 +11,8 @@ import {
 import "./ProductContainer.css";
 import ButtonChangeText from "../Button/ButtonChangeText";
 import { FiX } from "react-icons/fi";
+import CardProduct from "./CardProduct";
+import CardProduct2 from "./CardProduct2";
 
 const ProductContainer = () => {
   const [stateProduct, setStateProduct] = useState("");
@@ -46,6 +48,26 @@ const ProductContainer = () => {
           className="BoxCard"
           position={"relative"}
         >
+          {/* <HStack
+            width={"full"}
+            justifyContent={"space-around"}
+            display={stateProduct ? "flex" : "none"}
+          >
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+          </HStack> */}
+          <HStack
+            width={"full"}
+            justifyContent={"space-around"}
+            display={stateProduct ? "flex" : "none"}
+          >
+            <CardProduct2 />
+            {/* <CardProduct2 />
+            <CardProduct2 />
+            <CardProduct2 /> */}
+          </HStack>
           <IconButton
             display={stateProduct ? "flex" : "none"}
             onClick={() => setStateProduct("")}
