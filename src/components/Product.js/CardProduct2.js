@@ -9,16 +9,13 @@ const CardProduct2 = () => {
         <Box className="card-top">
           <img className="image" src="./image/robot.png" />
         </Box>
-        <Box className="card-bottom">
-          <span className="top-text">Creative Tim</span>
-          <br />
+        <VStack className="card-bottom" spacing={"16px"}>
           <span className="bottom-text">
             UI Kits, Templates and Dashboards. Join over 2,042,768 creatives to
             access all our products!
           </span>
-          <br />
-          <button className="button">Buy Now</button>
-        </Box>
+          <button className="button">Contact Now</button>
+        </VStack>
       </Box>
       <Text>Robot</Text>
     </VStack>

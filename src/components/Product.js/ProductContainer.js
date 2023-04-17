@@ -34,7 +34,7 @@ const ProductContainer = () => {
       <HStack width={"full"} justifyContent="space-around">
         <VStack
           width={stateProduct === "PD" ? "1280px" : "400px"}
-          height={stateProduct === "PD" ? "400px" : "400px"}
+          height={stateProduct === "PD" ? "800px" : "400px"}
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
           display={
             stateProduct === null
@@ -64,9 +64,19 @@ const ProductContainer = () => {
             display={stateProduct ? "flex" : "none"}
           >
             <CardProduct2 />
-            {/* <CardProduct2 />
             <CardProduct2 />
-            <CardProduct2 /> */}
+            <CardProduct2 />
+            <CardProduct2 />
+          </HStack>
+          <HStack
+            width={"full"}
+            justifyContent={"space-around"}
+            display={stateProduct ? "flex" : "none"}
+          >
+            <CardProduct2 />
+            <CardProduct2 />
+            <CardProduct2 />
+            <CardProduct2 />
           </HStack>
           <IconButton
             display={stateProduct ? "flex" : "none"}
@@ -110,6 +120,7 @@ const ProductContainer = () => {
             </div>
           </Box>
         </VStack>
+
         <VStack
           width={stateProduct === "FA" ? "1280px" : "400px"}
           height={stateProduct === "FA" ? "400px" : "400px"}

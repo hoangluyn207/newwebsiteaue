@@ -1,9 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MobileContext } from "../../components/MobileContext";
 import { VStack, Text, Box, HStack, calc } from "@chakra-ui/react";
 
 const HisBus = () => {
+  const { isMobile } = useContext(MobileContext);
+
   useEffect(() => {
     AOS.init({
       duration: 200,
@@ -14,7 +17,11 @@ const HisBus = () => {
   }, []);
   const LeftElement = ({ content, time }) => {
     return (
-      <HStack width={"1280px"} justifyContent="center" spacing={"32px"}>
+      <HStack
+        width={isMobile ? "100%" : "1280px"}
+        justifyContent="center"
+        spacing={"32px"}
+      >
         <Text data-aos="fade-right" width={"100%"} textAlign={"right"}>
           {content}
         </Text>
@@ -77,9 +84,19 @@ const HisBus = () => {
     <VStack paddingTop={"64px"} spacing={"16px"}>
       <LeftElement content={"Thành lập"} time={"2017"} />
       <Line />
-      <RightElement content={"Thành lập"} time={"2017"} />
+      <RightElement
+        content={
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        }
+        time={"2018"}
+      />
       <Line />
-      <LeftElement content={"Thành lập"} time={"2017"} />
+      <LeftElement
+        content={
+          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+        }
+        time={"2019"}
+      />
       <Line />
       <RightElement content={"Thành lập"} time={"2017"} />
       <Line />

@@ -198,11 +198,11 @@ const Member = () => {
             position={"Giám đốc"}
           />
           <BoxCard2
-            img={"/image/Trần Quốc Tuấn.jpg"}
-            name={"Trần Quốc Tuấn"}
+            img={"/image/luc.jpg"}
+            name={"Trương Phước Lực"}
             phone={"0979.301.422"}
-            mail={"tran.quoctuan@auevn.com"}
-            position={"Phó giám đốc"}
+            mail={"truong.phuocluc@auevn.com"}
+            position={"Phòng kỹ thuật"}
           />
           <BoxCard2
             img={"/image/Ngô Thị Hiền.jpg"}
@@ -259,12 +259,12 @@ const Member = () => {
               position={"Giám đốc"}
             />
             <BoxCard2
-              ado={"fade-left"}
-              img={"/image/Trần Quốc Tuấn.jpg"}
-              name={"Trần Quốc Tuấn"}
+              img={"/image/luc.jpg"}
+              name={"Trương Phước Lực"}
               phone={"0979.301.422"}
-              mail={"tran.quoctuan@auevn.com"}
-              position={"Phó giám đốc"}
+              mail={"truong.phuocluc@auevn.com"}
+              position={"Phòng kỹ thuật"}
+              ado={"fade-left"}
             />
           </HStack>
           <HStack width={"1280px"} display="flex" justifyContent="space-around">
