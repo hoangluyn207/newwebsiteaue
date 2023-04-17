@@ -64,7 +64,14 @@ const Member = () => {
         {isMobile ? (
           <VStack width={"full"}>
             <HStack width={"full"} alignItems={"center"} textAlign={"left"}>
-              <Avatar name={name} src={img} size={"lg"} />
+              <Avatar
+                display={"flex"}
+                alignItems="flex-start"
+                justifyContent="flex-start"
+                name={name}
+                src={img}
+                size={"lg"}
+              />
               <VStack
                 alignItems={"flex-start"}
                 textAlign={"left"}
@@ -233,7 +240,7 @@ const Member = () => {
             position={"Phòng kinh doanh"}
           />
           <BoxCard2
-            img={"/image/Nguyễn Thị Phương Thảo.png"}
+            img={"/image/Nguyễn Thị Phương Thảo.jpg"}
             name={"Nguyễn Thị Phương Thảo"}
             phone={"0905.996.598"}
             mail={"phuongthao.nguyen@auevn.com"}
@@ -303,7 +310,7 @@ const Member = () => {
             />
             <BoxCard2
               ado={"fade-left"}
-              img={"/image/Nguyễn Thị Phương Thảo.png"}
+              img={"/image/Nguyễn Thị Phương Thảo.jpg"}
               name={"Nguyễn Thị Phương Thảo"}
               phone={"0905.996.598"}
               mail={"phuongthao.nguyen@auevn.com"}

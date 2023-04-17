@@ -46,7 +46,11 @@ const HisBus = () => {
   };
   const RightElement = ({ content, time }) => {
     return (
-      <HStack width={"1280px"} justifyContent="center" spacing={"32px"}>
+      <HStack
+        width={isMobile ? "100%" : "1280px"}
+        justifyContent="center"
+        spacing={"32px"}
+      >
         <Box width={"100%"} backgroundColor={"red"} height={"full"}></Box>
         <Box
           position={"relative"}
@@ -81,7 +85,7 @@ const HisBus = () => {
   };
 
   return (
-    <VStack paddingTop={"64px"} spacing={"16px"}>
+    <VStack width={"full"} paddingTop={"64px"} spacing={"16px"}>
       <LeftElement content={"Thành lập"} time={"2017"} />
       <Line />
       <RightElement
@@ -98,9 +102,9 @@ const HisBus = () => {
         time={"2019"}
       />
       <Line />
-      <RightElement content={"Thành lập"} time={"2017"} />
+      <RightElement content={"Thành lập"} time={"2020"} />
       <Line />
-      <LeftElement content={"Thành lập"} time={"2017"} />
+      <LeftElement content={"Thành lập"} time={"2021"} />
     </VStack>
   );
 };
