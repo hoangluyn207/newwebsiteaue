@@ -196,8 +196,9 @@ const Member = () => {
         </ModalContent>
       </Modal>
       {isMobile ? (
-        <VStack spacing={"32px"} padding={"32px 16px"}>
+        <VStack spacing={"32px"} padding={"0px 16px"}>
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/NGUYEN QUANG VU.JPG"}
             name={"NGUYỄN QUANG VŨ"}
             phone={"0905.998.598"}
@@ -205,6 +206,7 @@ const Member = () => {
             position={"Giám đốc"}
           />
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/luc.jpg"}
             name={"Trương Phước Lực"}
             phone={"0979.301.422"}
@@ -212,6 +214,7 @@ const Member = () => {
             position={"Phòng kỹ thuật"}
           />
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/Ngô Thị Hiền.jpg"}
             name={"Ngô Thị Hiền"}
             phone={"0905.997.598"}
@@ -219,6 +222,7 @@ const Member = () => {
             position={"Phòng kế toán"}
           />
           {/* <BoxCard2
+          ado="zoom-in-up"
         img={"/image/NGUYEN QUANG VU.JPG"}
         name={"Nguyễn Thị Kim Hạnh"}
         phone={"0905.997.598"}
@@ -226,6 +230,7 @@ const Member = () => {
         position={"Kế toán"}
       /> */}
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/lương phước minh hoàng.JPG"}
             name={"Lương Phước Minh Hoàng"}
             phone={"0905.583.598"}
@@ -233,6 +238,7 @@ const Member = () => {
             position={"Phòng kinh doanh"}
           />{" "}
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/Nguyễn Thị Ánh.jpg"}
             name={"Nguyễn Thị Ánh"}
             phone={"0906.567.598"}
@@ -240,6 +246,7 @@ const Member = () => {
             position={"Phòng kinh doanh"}
           />
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/Nguyễn Thị Phương Thảo.jpg"}
             name={"Nguyễn Thị Phương Thảo"}
             phone={"0905.996.598"}
@@ -247,6 +254,7 @@ const Member = () => {
             position={"Phòng kinh doanh"}
           />{" "}
           <BoxCard2
+            ado="zoom-in-up"
             img={"/image/Nguyễn Khương Quỳnh.jpg"}
             name={"Nguyễn Khương Quỳnh"}
             phone={"0905.677.598"}
@@ -255,8 +263,12 @@ const Member = () => {
           />
         </VStack>
       ) : (
-        <VStack spacing={"48px"} padding={"68px 32px"}>
-          <HStack width={"1280px"} display="flex" justifyContent="space-around">
+        <VStack width={"1280px"} spacing={"48px"} padding={"0px 32px"}>
+          <HStack
+            width={"1280px"}
+            display="flex"
+            justifyContent="space-between"
+          >
             <BoxCard2
               ado={"fade-right"}
               img={"/image/NGUYEN QUANG VU.JPG"}
@@ -274,7 +286,11 @@ const Member = () => {
               ado={"fade-left"}
             />
           </HStack>
-          <HStack width={"1280px"} display="flex" justifyContent="space-around">
+          <HStack
+            width={"1280px"}
+            display="flex"
+            justifyContent="space-between"
+          >
             <BoxCard2
               ado={"fade-right"}
               img={"/image/Ngô Thị Hiền.jpg"}
@@ -299,7 +315,11 @@ const Member = () => {
               position={"Phòng kinh doanh"}
             />
           </HStack>
-          <HStack width={"1280px"} display="flex" justifyContent="space-around">
+          <HStack
+            width={"1280px"}
+            display="flex"
+            justifyContent="space-between"
+          >
             <BoxCard2
               ado={"fade-right"}
               img={"/image/Nguyễn Thị Ánh.jpg"}
@@ -325,7 +345,11 @@ const Member = () => {
           position={"Phòng mua hàng"}
         /> */}
           </HStack>
-          <HStack width={"1280px"} display="flex" justifyContent="space-around">
+          <HStack
+            width={"1280px"}
+            display="flex"
+            justifyContent="space-between"
+          >
             {/* <BoxCard2
           img={"/image/NGUYEN QUANG VU.JPG"}
           name={"Nguyễn Hồng Lam"}

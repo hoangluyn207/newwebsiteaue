@@ -79,32 +79,40 @@ const HisBus = () => {
         data-aos="fade-down"
         backgroundColor={"#0099cc"}
         width={"2px"}
-        height={"100px"}
+        height={isMobile ? "50px" : "100px"}
       ></Box>
     );
   };
 
   return (
-    <VStack width={"full"} paddingTop={"64px"} spacing={"16px"}>
-      <LeftElement content={"Thành lập"} time={"2017"} />
+    <VStack width={"full"} spacing={"16px"}>
+      <LeftElement content={"Thành lập Công Ty AUE Việt Nam"} time={"2017"} />
       <Line />
-      <RightElement
-        content={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-        }
-        time={"2018"}
-      />
+      <RightElement content={"Phát triển khách hàng & đối tác"} time={"2018"} />
       <Line />
       <LeftElement
         content={
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+          "Chiếm lĩnh thị trường miền Trung trong mảng thiết bị công nghiệp"
         }
         time={"2019"}
       />
       <Line />
-      <RightElement content={"Thành lập"} time={"2020"} />
+      <RightElement
+        content={"Phát triển đội ngũ & hệ thống quản lý"}
+        time={"2020"}
+      />
       <Line />
-      <LeftElement content={"Thành lập"} time={"2021"} />
+      <LeftElement
+        content={"Tìm kếm đối tác & phát triển đội ngũ"}
+        time={"2021"}
+      />
+      <Line />
+      <RightElement
+        content={
+          "Trở thành Nhà Phân Phối Mitsubishi Electric tại khu vực miền Trung"
+        }
+        time={"2022"}
+      />
     </VStack>
   );
 };

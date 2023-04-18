@@ -26,7 +26,7 @@ const Menu = () => {
       <LinkMenu link={"/sanpham"} textLink="SẢN PHẨM" />
       <LinkMenu link={"/giaiphap"} textLink="GIẢI PHÁP" />
       <LinkMenu link={"/duan"} textLink="DỰ ÁN" />
-      <LinkMenu link={"/thongtin"} textLink="THÔNG TIN" />
+      <LinkMenu link={"/thongtin"} textLink="GIỚI THIỆU" />
     </HStack>
   );
 };

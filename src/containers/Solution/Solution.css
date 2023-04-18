@@ -10,7 +10,7 @@ ul {
 }
 ul .booking-card {
   position: relative;
-  width: 600px;
+  max-width: 600px;
   display: flex;
   flex: 0 0 600px;
   flex-direction: column;
@@ -34,7 +34,7 @@ ul .booking-card::before {
   transition: 0.3s;
 }
 ul .booking-card .book-container {
-  height: 200px;
+  min-height: 200px;
 }
 ul .booking-card .book-container .content {
   position: relative;
@@ -75,7 +75,7 @@ ul .booking-card .informations-container .title {
   padding-bottom: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 24px;
 }
 ul .booking-card .informations-container .title::after {
   content: "";
@@ -83,12 +83,13 @@ ul .booking-card .informations-container .title::after {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  min-height: 3px;
   width: 50px;
   margin: auto;
   background: #0a4870;
 }
 ul .booking-card .informations-container .more-information {
+  height: 45px;
   opacity: 0;
   transition: 0.3s;
 }
@@ -113,11 +114,10 @@ ul
   border-radius: 10px;
   background: white;
   font-weight: bold;
-  font-size: 0.9em;
 }
 ul .booking-card .informations-container .more-information .disclaimer {
   margin-top: 20px;
-  font-size: 0.8em;
+  font-size: 14px;
   color: #7d7d7d;
 }
 ul .booking-card:hover::before {

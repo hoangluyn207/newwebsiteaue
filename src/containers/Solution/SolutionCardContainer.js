@@ -1,4 +1,4 @@
-import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Box, HStack, VStack, Image } from "@chakra-ui/react";
 import React from "react";
 import "./Solution.css";
 
@@ -10,8 +10,7 @@ const SolutionCardContainer = (props) => {
           <li
             className="booking-card"
             style={{
-              backgroundImage:
-                "url(https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ)",
+              backgroundImage: `url(${image})`,
             }}
           >
             <div className="book-container">
@@ -20,14 +19,10 @@ const SolutionCardContainer = (props) => {
               </div>
             </div>
             <div className="informations-container">
-              <h2 className="title">Giải pháp giám sát năng lượng</h2>
-              <p className="sub-title">Et moi un je suis sous-titre</p>
+              <h2 className="title">{title}</h2>
+              <p className="sub-title">{subtitle}</p>
               <div className="more-information">
-                <p className="disclaimer">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quasi eveniet perferendis culpa. Expedita architecto nesciunt,
-                  rem distinctio
-                </p>
+                <p className="disclaimer">{detail}</p>
               </div>
             </div>
           </li>
@@ -37,13 +32,42 @@ const SolutionCardContainer = (props) => {
   };
   return (
     <HStack {...props}>
-      <VStack>
-        <Card />
-        <Card />
+      <VStack spacing={"32px"}>
+        <Card
+          title={"Giám sát năng lượng"}
+          image={"./image/solution/Giamsatnangluong.jpg"}
+          subtitle={"Đảm bảo chi phí được quản lý hiệu quả"}
+          detail={
+            "Cung cấp một cách nhìn toàn cảnh cho người dùng về việc tiêu thụ năng lượng, tình trạng hoạt động và sự phân bố của năng lượng trong các khoảng thời điểm khác nhau"
+          }
+        />
+        <Card
+          image={"./image/solution/giamsatmaymoc.jpg"}
+          title={"Giám sát khí nén"}
+          subtitle={"Ngăn ngừa các sự cố về chất lượng khí"}
+          detail={
+            "Cung cấp thông tin về mức tiêu thụ năng lượng tại các thiết bị cụ thể, từ đó tìm ra các khu vực rò rỉ khí nén và đưa ra các biện pháp khắc phục"
+          }
+        />
       </VStack>
-      <VStack>
-        <Card />
-        <Card />
+      <VStack spacing={"32px"}>
+        <Card
+          title={"Giám sát trạng thái máy"}
+          image={"./image/solution/giamsatmaymoc.jpg"}
+          subtitle={"Nắm bắt không tức thời thông tin sự cố máy"}
+          detail={
+            "Hiển thị chi tiết thông tin hoạt động của từng máy. Thống kê biểu đồ theo từng mức độ thời gian (Bảo trì, Lỗi, Bình thường)"
+          }
+        />
+
+        <Card
+          image={"./image/solution/giamsatmaymoc.jpg"}
+          title={"Giám nhiệt độ, độ ẩm"}
+          subtitle={"Duy trì chất lượng sảm phẩm"}
+          detail={
+            "Các yếu tố như nhiệt độ và độ ẩm trong quá trình sản xuất và bảo quản có thể có tác động đáng kể đến chất lượng sản phẩm"
+          }
+        />
       </VStack>
     </HStack>
   );
