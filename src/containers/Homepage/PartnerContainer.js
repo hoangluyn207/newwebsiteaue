@@ -24,7 +24,7 @@ const PartnerContainer = () => {
         fontWeight="extrabold"
         fontSize={isMobile ? "28px" : "36px"}
       >
-        ĐỐI TÁC & KHÁCH HÀNG
+        ĐỐI TÁC
       </Text>
       {isMobile ? null : (
         <Swiper

@@ -1,4 +1,13 @@
-import { Image, VStack, Text, HStack } from "@chakra-ui/react";
+import {
+  Image,
+  VStack,
+  Text,
+  HStack,
+  Icon,
+  List,
+  ListItem,
+  ListIcon,
+} from "@chakra-ui/react";
 import React, { useContext, useEffect } from "react";
 import Member from "../AboutUs/Member";
 import ContactForm from "../AboutUs/ContactForm";
@@ -6,6 +15,8 @@ import { MobileContext } from "../../components/MobileContext";
 import HisBus from "../AboutUs/HisBus";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./AboutUs.css";
+import CheckedIcon from "../../icons/CheckedIcon";
 
 const AboutUs = () => {
   const { isMobile } = useContext(MobileContext);
@@ -36,25 +47,33 @@ const AboutUs = () => {
         <Text fontSize={"20px"} fontWeight={600}>
           {title}
         </Text>
-        <VStack
-          height={"100%"}
-          alignItems={"flex-start"}
-          textAlign={"left"}
-          spacing={"8px"}
-        >
-          <Text>{subtitle1}</Text>
-          <Text>{subtitle2}</Text>
-        </VStack>
+        <List style={{ listStyleImage: `url(${CheckedIcon})` }} height={"100%"}>
+          <ListItem>
+            <ListIcon as={CheckedIcon} />
+            {subtitle1}
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckedIcon} />
+            {subtitle2}
+          </ListItem>
+        </List>
       </VStack>
     );
   };
   return (
     <VStack
+      className="ContainerAboutus"
+      overflowX={"hidden"}
       spacing={isMobile ? "32px" : "128px"}
       width={isMobile ? "100vw" : "full"}
     >
-      <Image src="/image/AboutUs.JPG" width={isMobile ? "100vw" : "full"} />
-      <VStack spacing={"32px"}>
+      <VStack spacing={"32px"} width={"full"}>
+        <Image
+          src="/image/AboutUs.JPG"
+          height={"100vh"}
+          objectFit={"cover"}
+          width={isMobile ? "100vw" : "full"}
+        />
         <Text
           fontSize={isMobile ? "24px" : "36px"}
           textTransform={"uppercase"}
@@ -84,14 +103,14 @@ const AboutUs = () => {
         {isMobile ? (
           <VStack width={"full"} spacing={"32px"}>
             <TrietLyCard
-              title={"Trung Thực"}
-              subtitle1={"Mang những sản phẩm và dịch vụ thực cho khách hàng"}
-              subtitle2={"Người thật, việc thật"}
-            />
-            <TrietLyCard
               title={"Trách Nhiệm"}
               subtitle1={"Cung cấp một sản phẩm, trách nhiệm cả công ty"}
               subtitle2={"Bảo hành có hạn, trách nhiệm trường tồn"}
+            />
+            <TrietLyCard
+              title={"Trung Thực"}
+              subtitle1={"Mang những sản phẩm và dịch vụ thực cho khách hàng"}
+              subtitle2={"Người thật, việc thật"}
             />
             <TrietLyCard
               title={"Phát Triển Bền Vững"}
@@ -102,14 +121,14 @@ const AboutUs = () => {
         ) : (
           <HStack width={"1280px"} justifyContent={"space-between"}>
             <TrietLyCard
-              title={"Trung Thực"}
-              subtitle1={"Mang những sản phẩm và dịch vụ thực cho khách hàng"}
-              subtitle2={"Người thật, việc thật"}
-            />
-            <TrietLyCard
               title={"Trách Nhiệm"}
               subtitle1={"Cung cấp một sản phẩm, trách nhiệm cả công ty"}
               subtitle2={"Bảo hành có hạn, trách nhiệm trường tồn"}
+            />
+            <TrietLyCard
+              title={"Trung Thực"}
+              subtitle1={"Mang những sản phẩm và dịch vụ thực cho khách hàng"}
+              subtitle2={"Người thật, việc thật"}
             />
             <TrietLyCard
               title={"Phát Triển Bền Vững"}
@@ -130,7 +149,7 @@ const AboutUs = () => {
         </Text>
         <Member />
       </VStack>
-      <VStack spacing={"32px"}>
+      <VStack spacing={"32px"} width={"1280px"}>
         <Text
           fontSize={isMobile ? "24px" : "36px"}
           textTransform={"uppercase"}
@@ -139,7 +158,12 @@ const AboutUs = () => {
         >
           Chứng nhận
         </Text>
-        <Image width={"1280px"} src="./image/certificate.jpg" />
+        <HStack width={"full"}>
+          <VStack width={"50%"}>
+            <Text>AUTHORIZED DISTRIBUTOR CERTIFICATE</Text>
+          </VStack>
+          <Image width={"50%"} src="./image/certificate.jpg" />
+        </HStack>
       </VStack>
       <HStack
         height={isMobile ? null : "400px"}

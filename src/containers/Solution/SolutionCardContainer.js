@@ -42,7 +42,7 @@ const SolutionCardContainer = (props) => {
           }
         />
         <Card
-          image={"./image/solution/giamsatmaymoc.jpg"}
+          image={"./image/solution/khinen.png"}
           title={"Giám sát khí nén"}
           subtitle={"Ngăn ngừa các sự cố về chất lượng khí"}
           detail={
@@ -61,7 +61,7 @@ const SolutionCardContainer = (props) => {
         />
 
         <Card
-          image={"./image/solution/giamsatmaymoc.jpg"}
+          image={"./image/solution/nhietdo.jpg"}
           title={"Giám nhiệt độ, độ ẩm"}
           subtitle={"Duy trì chất lượng sảm phẩm"}
           detail={

@@ -8,13 +8,13 @@ import SolutionContainer from "../Homepage/SolutionContainer";
 const Homepage = () => {
   return (
     <VStack width={"full"} display="flex" justifyContent={"center"}>
-      <Image
+      {/* <Image
         width={"full"}
         src="/image/solutionHomepage1.jpg"
         alt="industrial"
         objectFit="cover"
         height="500px"
-      />
+      /> */}
       <InfoContainer />
       <SolutionContainer />
       <EquipmentContainer />

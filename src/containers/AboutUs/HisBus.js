@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MobileContext } from "../../components/MobileContext";
-import { VStack, Text, Box, HStack, calc } from "@chakra-ui/react";
+import { VStack, Text, Box, HStack, calc, Image } from "@chakra-ui/react";
 
 const HisBus = () => {
   const { isMobile } = useContext(MobileContext);
@@ -40,7 +40,9 @@ const HisBus = () => {
             {time}
           </Text>
         </Box>
-        <Box width={"100%"} backgroundColor={"red"} height={"full"}></Box>
+        <Box width={"100%"} height={"300px"}>
+          <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} />
+        </Box>
       </HStack>
     );
   };
@@ -51,7 +53,9 @@ const HisBus = () => {
         justifyContent="center"
         spacing={"32px"}
       >
-        <Box width={"100%"} backgroundColor={"red"} height={"full"}></Box>
+        <Box width={"100%"} height={"300px"}>
+          <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} />
+        </Box>
         <Box
           position={"relative"}
           margin={"0px 32px"}
@@ -79,40 +83,40 @@ const HisBus = () => {
         data-aos="fade-down"
         backgroundColor={"#0099cc"}
         width={"2px"}
-        height={isMobile ? "50px" : "100px"}
+        height={isMobile ? "50px" : "60px"}
       ></Box>
     );
   };
 
   return (
     <VStack width={"full"} spacing={"16px"}>
-      <LeftElement content={"Thành lập Công Ty AUE Việt Nam"} time={"2017"} />
+      <LeftElement
+        content={
+          "Trở thành Nhà Phân Phối Mitsubishi Electric tại khu vực miền Trung"
+        }
+        time={"2022"}
+      />
       <Line />
-      <RightElement content={"Phát triển khách hàng & đối tác"} time={"2018"} />
+      <RightElement
+        content={"Tìm kếm đối tác & phát triển đội ngũ"}
+        time={"2021"}
+      />
       <Line />
       <LeftElement
+        content={"Phát triển đội ngũ & hệ thống quản lý"}
+        time={"2020"}
+      />
+      <Line />
+      <RightElement
         content={
           "Chiếm lĩnh thị trường miền Trung trong mảng thiết bị công nghiệp"
         }
         time={"2019"}
       />
       <Line />
-      <RightElement
-        content={"Phát triển đội ngũ & hệ thống quản lý"}
-        time={"2020"}
-      />
+      <LeftElement content={"Phát triển khách hàng & đối tác"} time={"2018"} />
       <Line />
-      <LeftElement
-        content={"Tìm kếm đối tác & phát triển đội ngũ"}
-        time={"2021"}
-      />
-      <Line />
-      <RightElement
-        content={
-          "Trở thành Nhà Phân Phối Mitsubishi Electric tại khu vực miền Trung"
-        }
-        time={"2022"}
-      />
+      <RightElement content={"Thành lập Công Ty AUE Việt Nam"} time={"2017"} />
     </VStack>
   );
 };

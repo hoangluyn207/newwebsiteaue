@@ -4,7 +4,6 @@ import Location from "../../icons/Location";
 import Email from "../../icons/Email";
 import Info from "../../icons/Info";
 import Phone from "../../icons/Phone";
-import image from "../../image/backgroundFooter.png";
 import FacebookIcon36x36 from "../../icons/FacebookIcon36x36.js";
 import ZaloIcon36x36 from "../../icons/ZaloIcon36x36.js";
 import EmailIcon36x36 from "../../icons/EmailIcon36x36";
@@ -218,13 +217,22 @@ const Footer = () => {
           width={"100%"}
           display={"flex"}
           justifyContent={"center"}
-          paddingTop="128px"
+          position={"relative"}
         >
+          <Image
+            position={"absolute"}
+            width={"100%"}
+            bottom="0"
+            right={0}
+            opacity={"10%"}
+            src="./image/footerBg.png"
+            alt="industry and building"
+          />
           <HStack
             width={"1280px"}
             display={"flex"}
             justifyContent={"center"}
-            padding={"16px 32px"}
+            padding={"32px 32px"}
             alignItems="flex-start"
           >
             <Box width={"50%"}>
@@ -247,7 +255,6 @@ const Footer = () => {
               <VStack
                 width={"100%"}
                 paddingLeft="32px"
-                paddingTop="8px"
                 spacing={"8px"}
                 display="flex"
                 alignItems="flex-start"
@@ -282,16 +289,12 @@ const Footer = () => {
             display={"flex"}
             justifyContent={"center"}
           >
-            <Box width={"100%"} display={"flex"} justifyContent={"center"}>
-              <Image
-                position={"absolute"}
-                width={"100vw"}
-                bottom="0"
-                right={0}
-                opacity={"20%"}
-                src={image}
-                alt="industry and building"
-              />
+            <Box
+              width={"100%"}
+              display={"flex"}
+              justifyContent={"center"}
+              paddingBottom={"32px"}
+            >
               <HStack
                 fontSize="14px"
                 padding={"0px 32px"}
@@ -389,9 +392,6 @@ const Footer = () => {
               </HStack>
             </Box>
           </VStack>
-          <Box>
-            <Text textColor={"black"}>Design By AUE VietNam</Text>
-          </Box>
         </VStack>
       )}
     </>

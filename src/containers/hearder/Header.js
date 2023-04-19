@@ -41,7 +41,7 @@ const Header = (props) => {
             justifyContent={"space-between"}
           >
             <a href="./">
-              <Image height={"32px"} src={LogoAue} alt="Aue Viet Nam" />
+              <Image height={"58px"} src={LogoAue} alt="Aue Viet Nam" />
             </a>
             <Menu />
           </HStack>

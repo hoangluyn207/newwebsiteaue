@@ -1,0 +1,6 @@
+.ContainerAboutUs {
+  overflow-x: hidden;
+}
+.ContainerAboutUs::-webkit-scrollbar {
+  display: none;
+}
