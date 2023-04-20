@@ -218,6 +218,7 @@ const Footer = () => {
           display={"flex"}
           justifyContent={"center"}
           position={"relative"}
+          paddingTop={"64px"}
         >
           <Image
             position={"absolute"}
