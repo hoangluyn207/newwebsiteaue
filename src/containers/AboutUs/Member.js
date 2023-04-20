@@ -342,7 +342,7 @@ const Member = () => {
               img={"/image/member/luc.jpg"}
               name={"Trương Phước Lực"}
               phone={"0905.566.598"}
-              mail={"truong.phuocluc@auevn.com"}
+              mail={"phuocluc.truong@auevn.com"}
               position={"Phòng kỹ thuật"}
               ado={"fade-left"}
             />
