@@ -63,7 +63,7 @@ const SolutionCardContainer = (props) => {
         <Card
           image={"./image/solution/nhietdo.jpg"}
           title={"Giám sát nhiệt độ, độ ẩm"}
-          subtitle={"Duy trì chất lượng sảm phẩm"}
+          subtitle={"Duy trì chất lượng sản phẩm"}
           detail={
             "Các yếu tố như nhiệt độ và độ ẩm trong quá trình sản xuất và bảo quản có thể có tác động đáng kể đến chất lượng sản phẩm"
           }

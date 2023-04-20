@@ -1,12 +1,12 @@
 .my-swiper .swiper {
   margin-top: 128px;
   width: 1280px;
-  height: 50px;
+  height: 100px;
 }
 
 .my-swiper .swiper .swiper-slide {
   width: 50px;
-  height: 50px;
+  height: 100px;
   z-index: 2;
   text-align: center;
   font-size: 18px;
@@ -21,7 +21,7 @@
 
 .my-swiper .swiper .swiper-slide img {
   width: 100%;
-  height: 50px;
+  height: 100px;
   display: block;
   object-fit: contain;
 }

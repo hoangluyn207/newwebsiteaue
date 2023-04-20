@@ -341,7 +341,7 @@ const Member = () => {
             <BoxCard2
               img={"/image/member/luc.jpg"}
               name={"Trương Phước Lực"}
-              phone={"0979.301.422"}
+              phone={"0905.566.598"}
               mail={"truong.phuocluc@auevn.com"}
               position={"Phòng kỹ thuật"}
               ado={"fade-left"}

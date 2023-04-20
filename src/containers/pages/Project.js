@@ -15,8 +15,7 @@ const Project = () => {
       >
         <Image
           position="absolute"
-          width={"full"}
-          height="500px"
+          height="100vh"
           objectFit="cover"
           src="/image/projectCover.jpg"
           filter={"brightness(50%)"}

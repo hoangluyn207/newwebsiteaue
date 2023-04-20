@@ -29,35 +29,37 @@ const PartnerContainer = () => {
       {isMobile ? null : (
         <Swiper
           className="swiper"
-          slidesPerView={4}
+          centeredSlides={true}
+          slidesPerView={3}
           spaceBetween={30}
-          modules={Autoplay}
+          modules={[Autoplay]}
           loop={true}
           autoplay={{ delay: 1000 }}
         >
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image
+              width={"full"}
+              objectFit={"cover"}
+              src="/logo/ICONICS_logo.png"
+            />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/Kubota-Logo.png" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/logo.jpg" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/logorb.png" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/ptm.png" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/tge.png" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <Image objectFit={"cover"} src="/logo/coca.png" />
+            <Image objectFit={"cover"} src="/logo/dinco.png" />
           </SwiperSlide>
         </Swiper>
       )}
