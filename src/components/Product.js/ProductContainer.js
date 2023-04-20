@@ -30,8 +30,17 @@ const ProductContainer = () => {
           display={"flex"}
           justifyContent="center"
           transition={"0.5s"}
+          alignContent={"space-between"}
         >
-          <Image width={"full"} src="/image/Product/fa/fa.jpg" />
+          <Box
+            width={"full"}
+            height={"250px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Image width={"full"} src="/image/Product/fa/fa.png" />
+          </Box>
           <Box display={"flex"}>
             <div className="buttons">
               <button
@@ -59,10 +68,19 @@ const ProductContainer = () => {
           justifyContent="center"
           transition={"0.5s"}
         >
-          <Image
-            src="/image/Product/phanphoidien/thietbiphanphoidien.png"
+          <Box
             width={"full"}
-          />
+            height={"250px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Image
+              src="/image/Product/phanphoidien/thietbiphanphoidien.png"
+              width={"full"}
+            />
+          </Box>
+
           <Box>
             <div className="buttons">
               <button

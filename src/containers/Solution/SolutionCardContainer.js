@@ -54,7 +54,7 @@ const SolutionCardContainer = (props) => {
         <Card
           title={"Giám sát trạng thái máy"}
           image={"./image/solution/giamsatmaymoc.jpg"}
-          subtitle={"Nắm bắt không tức thời thông tin sự cố máy"}
+          subtitle={"Nắm bắt tức thời thông tin sự cố máy"}
           detail={
             "Hiển thị chi tiết thông tin hoạt động của từng máy. Thống kê biểu đồ theo từng mức độ thời gian (Bảo trì, Lỗi, Bình thường)"
           }
@@ -62,7 +62,7 @@ const SolutionCardContainer = (props) => {
 
         <Card
           image={"./image/solution/nhietdo.jpg"}
-          title={"Giám nhiệt độ, độ ẩm"}
+          title={"Giám sát nhiệt độ, độ ẩm"}
           subtitle={"Duy trì chất lượng sảm phẩm"}
           detail={
             "Các yếu tố như nhiệt độ và độ ẩm trong quá trình sản xuất và bảo quản có thể có tác động đáng kể đến chất lượng sản phẩm"

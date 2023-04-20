@@ -38,19 +38,12 @@ const Solution = () => {
           spacing={"16px"}
           padding={"32px 64px"}
         >
-          <Text
-            style={{ color: "#FFF" }}
-            fontWeight={800}
-            fontSize={"36px"}
-            textDecoration="underline"
-            textUnderlineOffset="5px"
-            textDecorationThickness="2px"
-          >
+          <Text style={{ color: "#FFF" }} fontWeight={800} fontSize={"36px"}>
             GIẢI PHÁP
           </Text>
           <Text textColor={"#FFF"}>
             AUE Việt Nam cung cấp các giải pháp đáp ứng nhu cầu của khách hàng
-            với giá trị tốt nhất.
+            với giá trị tốt nhất
           </Text>
         </VStack>
       </Box>
@@ -64,15 +57,18 @@ const Solution = () => {
         >
           <Text fontWeight={700}>CHỨNG NHẬN ICONICS</Text>
           <Text>
-            AUEVN vinh dự nhận được chứng nhận của ICONICS, một trong những công
-            ty hàng đầu thế giới trong việc cung cấp giải pháp phần mềm tự động
-            hóa tiên tiến nhất cho nhiều ngành công nghiệp trên toàn cầu. Giải
-            pháp phần mềm của ICONICS bao gồm trực quan hóa và kiểm soát nâng
-            cao; lưu trữ và truy xuất nhanh chóng; phân tích dữ liệu chuyên sâu;
-            di động hóa dữ liệu và tích hợp IIoT/đám mây. Đặc biệt, những công
-            cụ sáng tạo tích hợp như trực quan hóa, lập lịch sử, phân tích,
-            triển khai và quản lý dữ liệu đám mây theo quy trình và yêu cầu của
-            khách hàng, giúp ICONICS vượt trội hơn so với các đối thủ.
+            AUE Việt Nam vinh hạnh khi được đồng hành với Mitsubishi Electric
+            Việt Nam như một đối tác tích hợp hệ thống độc quyền Về SCADA
+            software-ICONICS Suite™. Là một trong những công ty hàng đầu thế
+            giới trong việc cung cấp giải pháp phần mềm tự động hóa tiên tiến
+            nhất cho nhiều ngành công nghiệp trên toàn cầu. <br />
+            Giải pháp phần mềm của ICONICS bao gồm quản lý trực quan nâng cao,
+            lưu trữ và truy xuất nhanh chóng, phân tích dữ liệu chuyên sâu, khả
+            năng tương thích trên nhiều thiết và tối ưu hóa IIoT/đám mây.
+            <br /> Đặc biệt, những công cụ sáng tạo tích hợp như trực quan hóa,
+            lập lịch sử, phân tích, triển khai và quản lý dữ liệu đám mây theo
+            quy trình và yêu cầu của khách hàng, giúp ICONICS vượt trội hơn so
+            với các đối thủ.
           </Text>
         </VStack>
         <Image width={"50%"} src="./image/v01.jpg" />

@@ -34,7 +34,7 @@ const Product = () => {
               Thương hiệu thiết bị điện hàng đầu thế giới với hơn 100 năm hình
               thành và phát triển.
               <br /> Chúng tôi tự tin có thể cung cấp trọn bộ các sản phẩm điều
-              khiển phù hợp với mọi yêu cầu điều khiển từ Nhà máy với hiệu suất
+              khiển phù hợp với mọi yêu cầu, thiết kế từ Nhà máy với hiệu suất
               và chất lượng tốt nhất.
             </Text>
           </VStack>

@@ -207,6 +207,39 @@ const Member = () => {
           />
           <BoxCard2
             ado="zoom-in-up"
+            img={"/image/lương phước minh hoàng.JPG"}
+            name={"Lương Phước Minh Hoàng"}
+            phone={"0905.583.598"}
+            mail={"minhhoang.luongphuoc@auevn.com"}
+            position={"Phòng kinh doanh"}
+          />
+          <BoxCard2
+            ado="zoom-in-up"
+            img={"/image/Nguyễn Thị Ánh.jpg"}
+            name={"Nguyễn Thị Ánh"}
+            phone={"0906.567.598"}
+            mail={"anh.nguyen@auevn.com"}
+            position={"Phòng kinh doanh"}
+          />
+          <BoxCard2
+            ado="zoom-in-up"
+            img={"/image/Nguyễn Thị Phương Thảo.jpg"}
+            name={"Nguyễn Thị Phương Thảo"}
+            phone={"0905.996.598"}
+            mail={"phuongthao.nguyen@auevn.com"}
+            position={"Phòng kinh doanh"}
+          />
+          <BoxCard2
+            ado="zoom-in-up"
+            img={"/image/Nguyễn Khương Quỳnh.jpg"}
+            name={"Nguyễn Khương Quỳnh"}
+            phone={"0905.677.598"}
+            mail={"khuongquynh.nguyen@auevn.com"}
+            position={"Phòng kỹ thuật"}
+          />
+
+          <BoxCard2
+            ado="zoom-in-up"
             img={"/image/luc.jpg"}
             name={"Trương Phước Lực"}
             phone={"0979.301.422"}
@@ -230,36 +263,12 @@ const Member = () => {
         position={"Kế toán"}
       /> */}
           <BoxCard2
-            ado="zoom-in-up"
-            img={"/image/lương phước minh hoàng.JPG"}
-            name={"Lương Phước Minh Hoàng"}
-            phone={"0905.583.598"}
-            mail={"minhhoang.luongphuoc@auevn.com"}
-            position={"Phòng kinh doanh"}
-          />{" "}
-          <BoxCard2
-            ado="zoom-in-up"
-            img={"/image/Nguyễn Thị Ánh.jpg"}
-            name={"Nguyễn Thị Ánh"}
-            phone={"0906.567.598"}
-            mail={"anh.nguyen@auevn.com"}
-            position={"Phòng kinh doanh"}
-          />
-          <BoxCard2
-            ado="zoom-in-up"
-            img={"/image/Nguyễn Thị Phương Thảo.jpg"}
-            name={"Nguyễn Thị Phương Thảo"}
-            phone={"0905.996.598"}
-            mail={"phuongthao.nguyen@auevn.com"}
-            position={"Phòng kinh doanh"}
-          />{" "}
-          <BoxCard2
-            ado="zoom-in-up"
-            img={"/image/Nguyễn Khương Quỳnh.jpg"}
-            name={"Nguyễn Khương Quỳnh"}
-            phone={"0905.677.598"}
-            mail={"khuongquynh.nguyen@auevn.com"}
-            position={"Phòng kỹ thuật"}
+            ado={"fade-left"}
+            img={"/image/Huỳnh Thị Thanh Hằng.JPG"}
+            name={"Huỳnh Thị Thanh Hằng"}
+            phone={"0777.961.912"}
+            mail={"thanhhang.huynh@auevn.com"}
+            position={"Phòng hành chính nhân sự"}
           />
         </VStack>
       ) : (
@@ -277,35 +286,6 @@ const Member = () => {
               mail={"quangvu.nguyen@auevn.com"}
               position={"Giám đốc"}
             />
-            <BoxCard2
-              img={"/image/luc.jpg"}
-              name={"Trương Phước Lực"}
-              phone={"0979.301.422"}
-              mail={"truong.phuocluc@auevn.com"}
-              position={"Phòng kỹ thuật"}
-              ado={"fade-left"}
-            />
-          </HStack>
-          <HStack
-            width={"1280px"}
-            display="flex"
-            justifyContent="space-between"
-          >
-            <BoxCard2
-              ado={"fade-right"}
-              img={"/image/Ngô Thị Hiền.jpg"}
-              name={"Ngô Thị Hiền"}
-              phone={"0905.997.598"}
-              mail={"thihien.ngo@auevn.com"}
-              position={"Phòng kế toán"}
-            />
-            {/* <BoxCard2
-          img={"/image/NGUYEN QUANG VU.JPG"}
-          name={"Nguyễn Thị Kim Hạnh"}
-          phone={"0905.997.598"}
-          mail={"kimhanh.nguyen@auevn.com"}
-          position={"Kế toán"}
-        /> */}
             <BoxCard2
               ado={"fade-left"}
               img={"/image/lương phước minh hoàng.JPG"}
@@ -339,6 +319,36 @@ const Member = () => {
 
             {/* <BoxCard2
           img={"/image/NGUYEN QUANG VU.JPG"}
+          name={"Nguyễn Thị Kim Hạnh"}
+          phone={"0905.997.598"}
+          mail={"kimhanh.nguyen@auevn.com"}
+          position={"Kế toán"}
+        /> */}
+          </HStack>
+          <HStack
+            width={"1280px"}
+            display="flex"
+            justifyContent="space-between"
+          >
+            <BoxCard2
+              ado={"fade-right"}
+              img={"/image/Nguyễn Khương Quỳnh.jpg"}
+              name={"Nguyễn Khương Quỳnh"}
+              phone={"0905.677.598"}
+              mail={"khuongquynh.nguyen@auevn.com"}
+              position={"Phòng kỹ thuật"}
+            />
+            <BoxCard2
+              img={"/image/luc.jpg"}
+              name={"Trương Phước Lực"}
+              phone={"0979.301.422"}
+              mail={"truong.phuocluc@auevn.com"}
+              position={"Phòng kỹ thuật"}
+              ado={"fade-left"}
+            />
+
+            {/* <BoxCard2
+          img={"/image/NGUYEN QUANG VU.JPG"}
           name={"Đỗ Uyễn My"}
           phone={"0905.878.598"}
           mail={"uyenmy.do@auevn.com"}
@@ -350,6 +360,14 @@ const Member = () => {
             display="flex"
             justifyContent="space-between"
           >
+            <BoxCard2
+              ado={"fade-right"}
+              img={"/image/Ngô Thị Hiền.jpg"}
+              name={"Ngô Thị Hiền"}
+              phone={"0905.997.598"}
+              mail={"thihien.ngo@auevn.com"}
+              position={"Phòng kế toán"}
+            />
             {/* <BoxCard2
           img={"/image/NGUYEN QUANG VU.JPG"}
           name={"Nguyễn Hồng Lam"}
@@ -357,14 +375,7 @@ const Member = () => {
           mail={"honglam.nguyen@auevn.com"}
           position={"Phòng mua hàng"}
         /> */}
-            <BoxCard2
-              ado={"fade-right"}
-              img={"/image/Nguyễn Khương Quỳnh.jpg"}
-              name={"Nguyễn Khương Quỳnh"}
-              phone={"0905.677.598"}
-              mail={"khuongquynh.nguyen@auevn.com"}
-              position={"Phòng kỹ thuật"}
-            />
+
             {/* <BoxCard2
           img={"/image/NGUYEN QUANG VU.JPG"}
           name={"Trương Phước Lực"}

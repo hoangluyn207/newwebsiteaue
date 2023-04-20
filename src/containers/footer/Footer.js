@@ -264,8 +264,15 @@ const Footer = () => {
                 <HStack>
                   <Location color={"#0099cc"} />
                   <Text>
-                    Lô A4-5, Đường Nguyễn Sinh Sắc, Phường Hòa Minh, Quận Liên
-                    Chiểu, TP Đà Nẵng
+                    Trụ sở chính: Lô A4-5, Nguyễn Sinh Sắc, Hòa Minh, Liên
+                    Chiểu, Đà Nẵng
+                  </Text>
+                </HStack>
+                <HStack>
+                  <Location color={"#0099cc"} />
+                  <Text>
+                    VP HCM: 40/5/8 Hồ Văn Long, Bình Hưng Hòa B, Bình Tân, Hồ
+                    Chí Minh
                   </Text>
                 </HStack>
                 <HStack>
@@ -274,11 +281,13 @@ const Footer = () => {
                 </HStack>
                 <HStack>
                   <Phone color={"#0099cc"} />
-                  <Text>0905.567.598</Text>
+                  <Text>
+                    0906.567.598 (Mrs. Ánh) - 0905.996.598 (Mrs. Thảo)
+                  </Text>
                 </HStack>
                 <HStack>
                   <Info color={"#0099cc"} />
-                  <Text>0401812217</Text>
+                  <Text>MST: 0401812217</Text>
                 </HStack>
               </VStack>
             </Box>
@@ -318,29 +327,8 @@ const Footer = () => {
                   >
                     Giới thiệu
                   </Text>
-                  <Text>Công ty chúng tôi</Text>
+                  <Text>Về chúng tôi</Text>
                   <Text>Nhân sự</Text>
-                  <Text>Định hướng</Text>
-                  <Text>Thành tựu</Text>
-                </VStack>
-                <VStack
-                  width={"25%"}
-                  spacing="8px"
-                  display={"flex"}
-                  alignItems="flex-start"
-                >
-                  <Text
-                    textColor={"#0099cc"}
-                    paddingBottom="8px"
-                    fontSize="16px"
-                    fontWeight="bold"
-                  >
-                    Giải pháp
-                  </Text>
-                  <Text>Giám sát năng lượng</Text>
-                  <Text>Giám sát năng lượng</Text>
-                  <Text>Giám sát năng lượng</Text>
-                  <Text>Giám sát năng lượng</Text>
                 </VStack>
                 <VStack
                   width={"25%"}
@@ -356,19 +344,28 @@ const Footer = () => {
                   >
                     Sản phẩm
                   </Text>
-                  <Text>Tự động hóa</Text>
-                  <Text paddingBottom="8px">Điện hạ thế</Text>
+                  <Text>Thiết bị tự động hóa</Text>
+                  <Text>Thiết bị phân phối điện hạ thế</Text>
+                </VStack>
+
+                <VStack
+                  width={"25%"}
+                  spacing="8px"
+                  display={"flex"}
+                  alignItems="flex-start"
+                >
                   <Text
                     textColor={"#0099cc"}
                     paddingBottom="8px"
                     fontSize="16px"
                     fontWeight="bold"
                   >
-                    Dự án
+                    Giải pháp
                   </Text>
-                  <Text>Awaken Hotel</Text>
-                  <Text>Gateway Thao Dien</Text>
-                  <Text>TH TrueMilk</Text>
+                  <Text>Giám sát năng lượng</Text>
+                  <Text>Giám sát trạng thái máy</Text>
+                  <Text>Giám sát khí nén</Text>
+                  <Text>Giám sát nhiệt độ, độ ẩm</Text>
                 </VStack>
                 <VStack
                   width={"25%"}
@@ -378,16 +375,12 @@ const Footer = () => {
                 >
                   <Text
                     textColor={"#0099cc"}
-                    paddingBottom="16px"
+                    paddingBottom="8px"
                     fontSize="16px"
                     fontWeight="bold"
                   >
-                    Đối tác
+                    Dự án
                   </Text>
-                  <Text>Coca-Cola</Text>
-                  <Text>Pepsi</Text>
-                  <Text>KFC</Text>
-                  <Text>VinGroup</Text>
                 </VStack>
               </HStack>
             </Box>
