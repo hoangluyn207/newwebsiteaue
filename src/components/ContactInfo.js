@@ -7,7 +7,6 @@ import ContactForm from "../containers/AboutUs/ContactForm.js";
 
 const ContactInfo = (props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -19,45 +18,41 @@ const ContactInfo = (props) => {
   }, []);
   return (
     <>
-      {isMobile ? (
-        <></>
-      ) : (
-        <VStack {...props}>
-          <IconButton
-            _hover={{
-              background: "transparent",
-              transform: "translateY(-2px)",
-            }}
-            background={"transparent"}
-            icon={<FacebookIcon36x36 />}
-            onClick={() => {
-              window.open("https://www.facebook.com/AUEVN", "_blank");
-            }}
-          />
+      <VStack {...props}>
+        <IconButton
+          _hover={{
+            background: "transparent",
+            transform: "translateY(-2px)",
+          }}
+          background={"transparent"}
+          icon={<FacebookIcon36x36 />}
+          onClick={() => {
+            window.open("https://www.facebook.com/AUEVN", "_blank");
+          }}
+        />
 
-          <IconButton
-            onClick={() => {
-              window.open("https://zalo.me/0906567598", "_blank");
-            }}
-            _hover={{
-              transform: "translateY(-2px)",
-              background: "transparent",
-            }}
-            background={"transparent"}
-            icon={<ZaloIcon36x36 />}
-          />
-          <IconButton
-            as="a"
-            href="mailto:sales@auevn.com"
-            _hover={{
-              transform: "translateY(-2px)",
-              background: "transparent",
-            }}
-            background={"transparent"}
-            icon={<EmailIcon36x36 />}
-          />
-        </VStack>
-      )}
+        <IconButton
+          onClick={() => {
+            window.open("https://zalo.me/0906567598", "_blank");
+          }}
+          _hover={{
+            transform: "translateY(-2px)",
+            background: "transparent",
+          }}
+          background={"transparent"}
+          icon={<ZaloIcon36x36 />}
+        />
+        <IconButton
+          as="a"
+          href="mailto:sales@auevn.com"
+          _hover={{
+            transform: "translateY(-2px)",
+            background: "transparent",
+          }}
+          background={"transparent"}
+          icon={<EmailIcon36x36 />}
+        />
+      </VStack>
     </>
   );
 };

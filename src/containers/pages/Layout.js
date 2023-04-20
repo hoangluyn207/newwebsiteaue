@@ -25,9 +25,9 @@ const Layout = () => {
   }, []);
   return (
     <VStack width={"full"} backgroundColor="#fff">
-      {isMobile ? (
+      {isMobile ? null : (
         <ContactInfo zIndex="999" position="fixed" left="64px" top="40%" />
-      ) : null}
+      )}
       <Header />
       {isLoading ? <Spinner animation="border" /> : <Outlet />}
       <Footer />
