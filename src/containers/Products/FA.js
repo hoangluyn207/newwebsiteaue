@@ -42,21 +42,28 @@ const FA = () => {
             onMouseLeave={onClose}
           >
             <Text fontSize={"18px"} paddingTop={"8px"}>
-              {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />} {Title}
+              {!detailProduct || detailProduct.length === 0 ? null : isOpen ? (
+                <ChevronUpIcon />
+              ) : (
+                <ChevronDownIcon />
+              )}{" "}
+              {Title}
             </Text>
           </MenuButton>
-          <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
-            {detailProduct.map((item, index) => (
-              <MenuItem
-                _hover={{ backgroundColor: "#f0f0f0" }}
-                key={`detail-${index}`}
-              >
-                <a target="_blank" href={item.Link}>
-                  {item.Name}
-                </a>
-              </MenuItem>
-            ))}
-          </MenuList>
+          {!detailProduct || detailProduct.length === 0 ? null : (
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+              {detailProduct.map((item, index) => (
+                <MenuItem
+                  _hover={{ backgroundColor: "#f0f0f0" }}
+                  key={`detail-${index}`}
+                >
+                  <a target="_blank" href={item.Link}>
+                    {item.Name}
+                  </a>
+                </MenuItem>
+              ))}
+            </MenuList>
+          )}
         </Menu>
       </VStack>
     );
@@ -66,6 +73,7 @@ const FA = () => {
     {
       Title: "PLC",
       img: "/image/Product/fa/PLC.png",
+      link: "",
       Item: [
         {
           Name: "iQ-R Series",
@@ -82,6 +90,122 @@ const FA = () => {
         {
           Name: "F Series",
           Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/plc_fx/l08490/l08490-a.pdf",
+        },
+      ],
+    },
+    {
+      Title: "AC SERVO",
+      img: "/image/Product/fa/ac servo.png",
+      link: "",
+      Item: [
+        {
+          Name: "MR-J5 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/servo/l03179eng/l03179engh.pdf",
+        },
+        {
+          Name: "MR-J4 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/servo/l03058/l03058engk.pdf",
+        },
+        {
+          Name: "MR-JET Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/servo/l03187eng/l03187enge.pdf",
+        },
+        {
+          Name: "MR-JE Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/servo/l03086/l03086engg.pdf",
+        },
+      ],
+    },
+    {
+      Title: "BIẾN TẦN",
+      img: "/image/Product/fa/Biến tần.png",
+      link: "",
+      Item: [
+        {
+          Name: "FR-A800 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/inv/l06075eng/l06075engh.pdf",
+        },
+        {
+          Name: "FR-F800 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/inv/l06085eng/l06085engc.pdf",
+        },
+        {
+          Name: "FR-E800 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/inv/l-06131eng/l06131engd.pdf",
+        },
+        {
+          Name: "FR-D700 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/inv/l06055eng/l06055engh.pdf",
+        },
+        {
+          Name: "FR-CS Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/inv/l06113eng/l06113enga.pdf",
+        },
+      ],
+    },
+    {
+      Title: "HMI",
+      img: "/image/Product/fa/HMI.png",
+      link: "",
+      Item: [
+        {
+          Name: "GOT2000 Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/got/l08461eng/l08461engd.pdf",
+        },
+        {
+          Name: "SOT Simple Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/got/l08676eng/l08676engb.pdf",
+        },
+      ],
+    },
+    {
+      Title: "ROBOT",
+      img: "/image/Product/fa/Robot.png",
+      link: "",
+      Item: [
+        {
+          Name: "FR Series",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/robot/l(na)-09091eng/l09091f.pdf",
+        },
+        {
+          Name: "Asista",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/robot/l(na)-09104eng/I09104b.pdf",
+        },
+      ],
+    },
+    {
+      Title: "SENSOR",
+      img: "/image/Product/fa/Sensor.png",
+      link: "",
+      Item: [
+        {
+          Name: "Vision Sensor",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/sensor/l08591eng/l08591engh.pdf",
+        },
+        {
+          Name: "Code Reader",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/sensor/l08691eng/l08691engd.pdf",
+        },
+      ],
+    },
+    {
+      Title: "GEAR MOTOR",
+      img: "/image/Product/fa/Gear Motor.png",
+      link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/gear/gm-48/Geared_Motors_catalog.pdf",
+      Item: [],
+    },
+    {
+      Title: "SOFTWARE",
+      img: "/image/Product/fa/Software.jpg",
+      link: "",
+      Item: [
+        {
+          Name: "SCADA",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/scada/l08785eng/l08785engd.pdf",
+        },
+        {
+          Name: "SoftGOT",
+          Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/got/l08606eng/l08606enga.pdf",
         },
       ],
     },

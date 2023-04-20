@@ -11,6 +11,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import ScrollToTop from "./scrollToTop";
 import { MobileContextProvider } from "./components/MobileContext";
 import FA from "./containers/Products/FA";
+import PD from "./containers/Products/PD";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/duan" element={<Project />} />
                 <Route path="/thongtin" element={<AboutUs />} />
                 <Route path="/sanpham/fa" element={<FA />} />
+                <Route path="/sanpham/pd" element={<PD />} />
               </Route>
             </Routes>
           </BrowserRouter>
