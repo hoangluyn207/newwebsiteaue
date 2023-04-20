@@ -1,5 +1,7 @@
 .swiper {
   width: 1280px;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .swiper-slide {

@@ -56,7 +56,7 @@ const Solution = () => {
           textAlign={"left"}
         >
           <Text fontWeight={700}>CHỨNG NHẬN ICONICS</Text>
-          <Text>
+          <Text textAlign={"justify"}>
             AUE Việt Nam vinh hạnh khi được đồng hành với Mitsubishi Electric
             Việt Nam như một đối tác tích hợp hệ thống độc quyền Về SCADA
             software-ICONICS Suite™. Là một trong những công ty hàng đầu thế

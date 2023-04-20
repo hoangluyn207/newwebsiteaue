@@ -78,16 +78,20 @@ const InfoContainer = () => {
             </Text>
             <Text fontWeight={"600"}>Chúng tôi là ai?</Text>
             <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              evermáy in ảnh mini since the 1500s, when an unknown printer took
-              a galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Công ty TNHH AUE Việt Nam - đại diện ủy quyền của thương hiệu danh
+              tiếng Mitsubishi Electric tại Việt Nam. Chúng tôi tự hào là một
+              trong những nhà cung cấp hàng đầu về thiết bị đóng cắt, tự động
+              hóa và giải pháp kỹ thuật tại thị trường Việt Nam. Tận dụng sức
+              mạnh từ đội ngũ kỹ sư chuyên nghiệp trên 3 miền đất nước, chúng
+              tôi luôn hướng đến sứ mệnh "Nâng tầm nước Việt" bằng việc cung cấp
+              sản phẩm và giải pháp kỹ thuật đạt chuẩn quốc tế và đáp ứng nhu
+              cầu của khách hàng trong các ngành công nghiệp. Với sự cam kết và
+              nỗ lực không ngừng, chúng tôi cam kết đem đến cho khách hàng sự
+              hài lòng cao nhất với chất lượng dịch vụ từ các nước G7 được thực
+              hiện bởi đội ngũ kỹ sư Việt Nam đầy nhiệt huyết và năng lượng.
+              Chúng tôi tin rằng, sự thành công của khách hàng cũng là thành
+              công của chúng tôi. Hãy đồng hành cùng chúng tôi để xây dựng một
+              tương lai tươi sáng và phát triển bền vững cho Việt Nam.
             </Text>
           </VStack>
           <VStack padding={"16px"} width={"100vw"} spacing={"32px"}>
@@ -107,7 +111,7 @@ const InfoContainer = () => {
               icon={<Giatricotloi />}
             />
             <CirclePubble
-              title={"Chứng nhận"}
+              title={"Sứ mệnh"}
               content="Contrary to popular belief, Lorem Ipsum is not simply random text."
             />
           </VStack>
@@ -125,6 +129,7 @@ const InfoContainer = () => {
             alignItems="flex-start"
             textAlign={"left"}
             data-aos="fade-right"
+            padding={"32px"}
           >
             <Text
               textAlign={"start"}
@@ -135,17 +140,23 @@ const InfoContainer = () => {
               GIỚI THIỆU
             </Text>
             <Text fontWeight={"600"}>Chúng tôi là ai?</Text>
-            <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              evermáy in ảnh mini since the 1500s, when an unknown printer took
-              a galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            <Text textAlign={"justify"}>
+              Công ty TNHH AUE Việt Nam - đại diện ủy quyền của thương hiệu danh
+              tiếng Mitsubishi Electric tại Việt Nam. Chúng tôi tự hào là một
+              trong những nhà cung cấp hàng đầu về thiết bị đóng cắt, tự động
+              hóa và giải pháp kỹ thuật tại thị trường Việt Nam.
+              <br /> Tận dụng sức mạnh từ đội ngũ kỹ sư chuyên nghiệp trên 3
+              miền đất nước, chúng tôi luôn hướng đến sứ mệnh "Nâng tầm nước
+              Việt" bằng việc cung cấp sản phẩm và giải pháp kỹ thuật đạt chuẩn
+              quốc tế và đáp ứng nhu cầu của khách hàng trong các ngành công
+              nghiệp.
+              <br /> Với sự cam kết và nỗ lực không ngừng, chúng tôi cam kết đem
+              đến cho khách hàng sự hài lòng cao nhất với chất lượng dịch vụ từ
+              các nước G7 được thực hiện bởi đội ngũ kỹ sư Việt Nam đầy nhiệt
+              huyết và năng lượng.
+              <br /> Chúng tôi tin rằng, sự thành công của khách hàng cũng là
+              thành công của chúng tôi. Hãy đồng hành cùng chúng tôi để xây dựng
+              một tương lai tươi sáng và phát triển bền vững cho Việt Nam.
             </Text>
           </VStack>
           <HStack
@@ -173,7 +184,7 @@ const InfoContainer = () => {
                 icon={<Giatricotloi />}
               />
               <CirclePubble
-                title={"Chứng nhận"}
+                title={"Sứ mệnh"}
                 content="Contrary to popular belief, Lorem Ipsum is not simply random text."
               />
             </VStack>

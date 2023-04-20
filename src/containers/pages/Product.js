@@ -27,7 +27,7 @@ const Product = () => {
             >
               SẢN PHẨM
             </Text>
-            <Text>
+            <Text textAlign={"justify"}>
               AUE Việt Nam hiện đang là Nhà phân phối ủy quyền chính thức Thiết
               bị phân phối điện hạ thế và Tự động hóa Mitsubishi Electric.
               <br />

@@ -63,6 +63,10 @@ const ProjectContainer = () => {
         centeredSlides={true}
         initialSlide={3}
         className="mySwiper"
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
       >
         {DataProject.map((item, index) => (
           <SwiperSlide key={index} width={"full"}>
