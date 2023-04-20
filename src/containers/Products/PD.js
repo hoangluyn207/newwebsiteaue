@@ -72,13 +72,13 @@ const PD = () => {
   const ProductData = [
     {
       Title: "ACB",
-      img: "/image/Product/phanphoidien/acb.jpg",
+      img: "/image/Product/phanphoidien/acb.png",
       link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/lvcb/yn-c-0622/y0622l2209.pdf",
       Item: [],
     },
     {
       Title: "MCCB-ELCB",
-      img: "/image/Product/phanphoidien/mccb-elcb.jpg",
+      img: "/image/Product/phanphoidien/mccb-elcb.png",
       link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/lvcb/yn-c-0622/y0622l2209.pdf",
       Item: [],
     },
@@ -90,13 +90,13 @@ const PD = () => {
     },
     {
       Title: "MMP",
-      img: "/image/Product/phanphoidien/mmp.jpg",
+      img: "/image/Product/phanphoidien/mmp.png",
       link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/lvsw/02032eng/L(NA)02032ENG-B.pdf",
       Item: [],
     },
     {
       Title: "MCB",
-      img: "/image/Product/phanphoidien/mcb.jpg",
+      img: "/image/Product/phanphoidien/mcb.png",
       link: "",
       Item: [
         {

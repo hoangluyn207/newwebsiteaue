@@ -153,7 +153,7 @@ const FA = () => {
           Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/got/l08461eng/l08461engd.pdf",
         },
         {
-          Name: "SOT Simple Series",
+          Name: "GOT Simple Series",
           Link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/got/l08676eng/l08676engb.pdf",
         },
       ],
