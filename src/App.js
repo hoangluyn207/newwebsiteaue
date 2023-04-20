@@ -10,6 +10,7 @@ import Project from "./containers/pages/Project";
 import { ChakraProvider } from "@chakra-ui/react";
 import ScrollToTop from "./scrollToTop";
 import { MobileContextProvider } from "./components/MobileContext";
+import FA from "./containers/Products/FA";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/giaiphap" element={<Solution />} />
                 <Route path="/duan" element={<Project />} />
                 <Route path="/thongtin" element={<AboutUs />} />
+                <Route path="/sanpham/fa" element={<FA />} />
               </Route>
             </Routes>
           </BrowserRouter>

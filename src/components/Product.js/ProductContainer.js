@@ -13,16 +13,20 @@ import ButtonChangeText from "../Button/ButtonChangeText";
 import { FiX } from "react-icons/fi";
 import CardProduct from "./CardProduct";
 import CardProduct2 from "./CardProduct2";
+import { useNavigate } from "react-router-dom";
 
 const ProductContainer = () => {
-  const [stateProduct, setStateProduct] = useState("");
-
   // useEffect(() => {
   //   if (stateProduct === "FA") {
   //   } else {
   //   }
   // }, [stateProduct]);
 
+  const navigate = useNavigate();
+
+  function pdClick() {
+    navigate.push("/fa");
+  }
   return (
     <Box
       width="1280px"
@@ -33,54 +37,16 @@ const ProductContainer = () => {
     >
       <HStack width={"full"} justifyContent="space-around">
         <VStack
-          width={stateProduct === "PD" ? "1280px" : "400px"}
-          height={stateProduct === "PD" ? "800px" : "400px"}
+          width={"400px"}
+          height={"400px"}
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
-          display={
-            stateProduct === null
-              ? "flex"
-              : stateProduct === "FA"
-              ? "none"
-              : "flex"
-          }
+          display={"flex"}
           justifyContent="center"
           transition={"0.5s"}
           className="BoxCard"
           position={"relative"}
         >
-          {/* <HStack
-            width={"full"}
-            justifyContent={"space-around"}
-            display={stateProduct ? "flex" : "none"}
-          >
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-          </HStack> */}
-          <HStack
-            width={"full"}
-            justifyContent={"space-around"}
-            display={stateProduct ? "flex" : "none"}
-          >
-            <CardProduct2 />
-            <CardProduct2 />
-            <CardProduct2 />
-            <CardProduct2 />
-          </HStack>
-          <HStack
-            width={"full"}
-            justifyContent={"space-around"}
-            display={stateProduct ? "flex" : "none"}
-          >
-            <CardProduct2 />
-            <CardProduct2 />
-            <CardProduct2 />
-            <CardProduct2 />
-          </HStack>
           <IconButton
-            display={stateProduct ? "flex" : "none"}
-            onClick={() => setStateProduct("")}
             position={"absolute"}
             top={0}
             right={0}
@@ -89,7 +55,7 @@ const ProductContainer = () => {
             icon={<FiX />}
           />
           <Image
-            display={stateProduct === "PD" ? "none" : "flex"}
+            display={"flex"}
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
             className="Image"
@@ -98,23 +64,19 @@ const ProductContainer = () => {
             top={"-100px"}
             transition={"0.5s"}
           />
-          <Box
-            display={stateProduct === "PD" ? "none" : "flex"}
-            position={"absolute"}
-            bottom="0px"
-          >
+          <Box display={"flex"} position={"absolute"} bottom="0px">
             <div className="buttons">
               <button
                 className="btn"
                 onClick={() => {
-                  setStateProduct("PD");
+                  window.location.href = "/sanpham/fa";
                 }}
               >
                 <span></span>
                 <p
                   data-start="good luck!"
                   data-text="XEM THÊM"
-                  data-title="FACTORY AUTOMATION"
+                  data-title="THIẾT BỊ TỰ ĐỘNG HÓA"
                 ></p>
               </button>
             </div>
@@ -122,33 +84,17 @@ const ProductContainer = () => {
         </VStack>
 
         <VStack
-          width={stateProduct === "FA" ? "1280px" : "400px"}
-          height={stateProduct === "FA" ? "400px" : "400px"}
+          width={"400px"}
+          height={"400px"}
           boxShadow="20px 20px 60px #d9d9d9,-20px 0 60px #ffffff"
-          display={
-            stateProduct === null
-              ? "flex"
-              : stateProduct === "PD"
-              ? "none"
-              : "flex"
-          }
+          display={"flex"}
           justifyContent="center"
           transition={"0.5s"}
           className="BoxCard"
           position={"relative"}
         >
-          <IconButton
-            display={stateProduct ? "flex" : "none"}
-            onClick={() => setStateProduct("")}
-            position={"absolute"}
-            top={0}
-            right={0}
-            zIndex={2}
-            backgroundColor={"transparent"}
-            icon={<FiX />}
-          />
           <Image
-            display={stateProduct === "FA" ? "none" : "flex"}
+            display={"flex"}
             height={"350px"}
             transform="translateY(-80px)"
             filter="drop-shadow(-5px 5px 10px #ccc)"
@@ -157,23 +103,19 @@ const ProductContainer = () => {
             top={"-100px"}
             transition={"0.5s"}
           />
-          <Box
-            display={stateProduct === "FA" ? "none" : "flex"}
-            position={"absolute"}
-            bottom="0px"
-          >
+          <Box display={"flex"} position={"absolute"} bottom="0px">
             <div className="buttons">
               <button
-                onClick={() => {
-                  setStateProduct("FA");
-                }}
                 className="btn"
+                onClick={() => {
+                  window.location.href = "/sanpham/pd";
+                }}
               >
                 <span></span>
                 <p
                   data-start="good luck!"
                   data-text="XEM THÊM"
-                  data-title="POWER DISTRIBUTON"
+                  data-title="THIẾT BỊ PHÂN PHỐI ĐIỆN HẠ THẾ"
                 ></p>
               </button>
             </div>

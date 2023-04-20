@@ -40,8 +40,8 @@ const HisBus = () => {
             {time}
           </Text>
         </Box>
-        <Box width={"100%"} height={"300px"}>
-          <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} />
+        <Box width={"100%"}>
+          {/* <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} /> */}
         </Box>
       </HStack>
     );
@@ -53,8 +53,8 @@ const HisBus = () => {
         justifyContent="center"
         spacing={"32px"}
       >
-        <Box width={"100%"} height={"300px"}>
-          <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} />
+        <Box width={"100%"}>
+          {/* <Image width={"100%"} src="/image/AboutUS.JPG" height={"300px"} /> */}
         </Box>
         <Box
           position={"relative"}

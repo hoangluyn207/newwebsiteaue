@@ -28,6 +28,7 @@ const Solution = () => {
           src="/image/coverSolution.jpg"
         />
         <VStack
+          className="figure"
           background="linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))"
           backdropFilter="blur(10px)"
           border-radius="20px"

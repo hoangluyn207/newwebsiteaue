@@ -28,16 +28,14 @@ const Product = () => {
               SẢN PHẨM
             </Text>
             <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              AUE Việt Nam hiện đang là Nhà phân phối ủy quyền chính thức Thiết
+              bị phân phối điện hạ thế và Tự động hóa Mitsubishi Electric.
+              <br />
+              Thương hiệu thiết bị điện hàng đầu thế giới với hơn 100 năm hình
+              thành và phát triển.
+              <br /> Chúng tôi tự tin có thể cung cấp trọn bộ các sản phẩm điều
+              khiển phù hợp với mọi yêu cầu điều khiển từ Nhà máy với hiệu suất
+              và chất lượng tốt nhất.
             </Text>
           </VStack>
           <Image width={"600px"} src="/image/backgroundProduct.png" />
