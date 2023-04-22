@@ -9,6 +9,7 @@ const Product = () => {
       paddingTop={"64px"}
       display={"flex"}
       justifyContent="center"
+      paddingBottom={"100px"}
     >
       <Box width="1280px" display={"flex"} justifyContent="center">
         <HStack spacing={"32px"}>

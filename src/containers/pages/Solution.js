@@ -10,6 +10,7 @@ const Solution = () => {
       display="flex"
       justifyContent={"center"}
       spacing={"32px"}
+      paddingBottom={"100px"}
     >
       <Box
         className="SolutionCoverContainer"

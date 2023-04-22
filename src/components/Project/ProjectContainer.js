@@ -56,7 +56,7 @@ const ProjectContainer = () => {
   ];
 
   return (
-    <Box padding={"32px 0px 128px 0px"}>
+    <Box padding={"32px 0px 128px 0px"} className="ProjecContainerCard">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -77,7 +77,7 @@ const ProjectContainer = () => {
               backgroundColor="#FFF"
               alignItems="flex-start"
             >
-              <Box width="100%" overflow={"hidden"}>
+              <Box className="Card" width="100%" overflow={"hidden"}>
                 <Image
                   transition={"0.5s"}
                   src={item.Image}

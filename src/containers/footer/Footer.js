@@ -11,6 +11,7 @@ import FacebookSmallIcon from "../../icons/FacebookSmallIcon";
 import ZaloSmallIcon from "../../icons/ZaloSmallIcon";
 import LinkdInSmallIcon from "../../icons/LinkdInSmallIcon";
 import EmailSmallIcon from "../../icons/EmailSmallIcon";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -282,9 +283,7 @@ const Footer = () => {
                 </HStack>
                 <HStack>
                   <Phone color={"#0099cc"} />
-                  <Text>
-                    0906.567.598 (Mrs. Ánh) - 0905.996.598 (Mrs. Thảo)
-                  </Text>
+                  <Text>0906.567.598 (Ms. Ánh) - 0905.996.598 (Ms. Thảo)</Text>
                 </HStack>
                 <HStack>
                   <Info color={"#0099cc"} />
@@ -320,14 +319,15 @@ const Footer = () => {
                   display={"flex"}
                   alignItems="flex-start"
                 >
-                  <Text
+                  <Link
+                    to={"/thongtin"}
                     textColor={"#0099cc"}
                     paddingBottom="8px"
                     fontSize="16px"
                     fontWeight="bold"
                   >
                     Giới thiệu
-                  </Text>
+                  </Link>
                   <Text>Về chúng tôi</Text>
                   <Text>Nhân sự</Text>
                 </VStack>

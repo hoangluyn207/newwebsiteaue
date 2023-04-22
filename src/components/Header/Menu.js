@@ -1,7 +1,7 @@
 import { Box, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import "./Menu.css";
 const Menu = () => {
   const location = useLocation();
   const url = location.pathname;
@@ -9,10 +9,14 @@ const Menu = () => {
 
   const LinkMenu = ({ link, textLink }) => {
     return (
-      <Link _hover={{ textDecoration: "none" }} to={link}>
+      <Link
+        className="hover-underline-animation"
+        _hover={{ textDecoration: "none" }}
+        to={link}
+      >
         <Text
           textColor={url === link ? "#0099cc" : "black"}
-          _hover={{ textColor: "#0099cc", transition: "0.3s" }}
+          _hover={{ textColor: "#0099cc", transition: "0.5s" }}
         >
           {textLink}
         </Text>

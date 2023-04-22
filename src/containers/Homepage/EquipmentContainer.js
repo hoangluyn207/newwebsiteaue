@@ -5,6 +5,8 @@ import Solution from "../../icons/Solution";
 import PowerDistributon from "../../icons/PowerDistributon";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+
 const EquipmentContainer = () => {
   useEffect(() => {
     AOS.init({
@@ -40,9 +42,11 @@ const EquipmentContainer = () => {
       </VStack>
     );
   };
-  const CirclePubble = ({ icon, title, content, ado }) => {
+  const CirclePubble = ({ icon, title, content, ado, link }) => {
     return (
       <HStack
+        as={Link}
+        to={`/sanpham/${link}`}
         data-aos={ado}
         width={"full"}
         height="150px"
@@ -50,14 +54,17 @@ const EquipmentContainer = () => {
         boxShadow="20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff"
         padding={"8px"}
         spacing="16px"
+        _hover={{
+          cursor: "pointer",
+        }}
       >
         <IconButton
           width={"150px"}
           icon={icon}
           background="transparent"
-          cursor="default"
           _hover={{
             background: "transparent",
+            cursor: "pointer",
           }}
         ></IconButton>
         <VStack display={"flex"} alignItems={"flex-start"} textAlign="left">
@@ -98,23 +105,25 @@ const EquipmentContainer = () => {
         <Text fontWeight={"extrabold"} fontSize="36px">
           SẢN PHẨM
         </Text>
-        <Text width={isMobile ? "100%" : "60%"}>
+        {/* <Text width={isMobile ? "100%" : "60%"}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
-        </Text>
+        </Text> */}
       </VStack>
       {isMobile ? (
         <VStack padding={"32px"} width={"100%"} spacing={"32px"}>
           <CirclePubble
-            title={"Factory Automation"}
-            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            link={"fa"}
+            title={"Thiết bị tự động hóa"}
+            content="An toàn, độ chính xác cao, dễ sử dụng."
             icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
           />
           <CirclePubble
-            title={"Power Distributon"}
-            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            link={"pd"}
+            title={"Thiết bị phân phối điện hạ thê"}
+            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
             icon={<PowerDistributon />}
           />
         </VStack>
@@ -126,15 +135,17 @@ const EquipmentContainer = () => {
           spacing={"32px"}
         >
           <CirclePubble
+            link={"fa"}
             ado="fade-right"
-            title={"Factory Automation"}
-            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            title={"Thiết bị tự động hóa"}
+            content="An toàn, độ chính xác cao, dễ sử dụng"
             icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
           />
           <CirclePubble
+            link={"pd"}
             ado="fade-left"
-            title={"Power Distributon"}
-            content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+            title={"Thiết bị phân phối điện hạ thê"}
+            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
             icon={<PowerDistributon />}
           />
         </HStack>

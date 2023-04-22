@@ -66,6 +66,7 @@ const AboutUs = () => {
       overflowX={"hidden"}
       spacing={isMobile ? "32px" : "128px"}
       width={isMobile ? "100vw" : "full"}
+      paddingBottom={"100px"}
     >
       <VStack spacing={"32px"} width={"full"}>
         <Image
