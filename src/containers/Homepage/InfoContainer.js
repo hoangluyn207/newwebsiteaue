@@ -127,7 +127,7 @@ const InfoContainer = () => {
             />
             <CirclePubble
               title={"Nhiệm vụ"}
-              // content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              content="Đem nến những giải pháp, những sản phẩm toàn diện, hiệu quả"
               icon={<Nhiemvu />}
             />
             <CirclePubble
@@ -137,7 +137,7 @@ const InfoContainer = () => {
             />
             <CirclePubble
               title={"Sứ mệnh"}
-              // content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              content="Phát triển sản phẩm Mitsubishi Electric trở thành sản phẩm Top 1 thị trường trong phân khúc tại Việt Nam"
             />
           </VStack>
         </VStack>
@@ -202,7 +202,7 @@ const InfoContainer = () => {
               />
               <CirclePubble
                 title={"Nhiệm vụ"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+                content="Đem nến những giải pháp, những sản phẩm toàn diện, hiệu quả"
                 icon={<Nhiemvu />}
                 Wicon={<NhiemvuW />}
               />
@@ -216,7 +216,7 @@ const InfoContainer = () => {
               />
               <CirclePubble
                 title={"Sứ mệnh"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+                content="Phát triển sản phẩm Mitsubishi Electric trở thành sản phẩm Top 1 thị trường trong phân khúc tại Việt Nam"
               />
             </VStack>
           </HStack>

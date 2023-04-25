@@ -23,10 +23,10 @@ const SolutionContainer = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const Card = ({ Title }) => {
+  const Card = ({ Title, image }) => {
     return (
       <VStack
-        width={isMobile ? "80%" : "20%"}
+        width={isMobile ? "80%" : "45%"}
         position="relative"
         background="#ffffff"
         height="300px"
@@ -38,7 +38,21 @@ const SolutionContainer = () => {
           boxShadow: "20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff",
         }}
       >
-        <Text position={"absolute"} bottom="20px">
+        <Image
+          width={"full"}
+          height={"full"}
+          objectFit={"cover"}
+          borderRadius={"8px"}
+          src={image}
+        />
+        <Text
+          borderBottomRadius={"8px"}
+          width={"full"}
+          lineHeight={"50px"}
+          backgroundColor={"#fff"}
+          position={"absolute"}
+          bottom="0"
+        >
           {Title}
         </Text>
       </VStack>
@@ -86,10 +100,19 @@ const SolutionContainer = () => {
       </VStack>
       {isMobile ? (
         <VStack width={"100%"} spacing={"16px"} padding="16px">
-          <Card Title={"EMS"} />
-          <Card Title={"BMS"} />
-          <Card Title={"Scada"} />
-          <Card Title={"Alarm Managerment"} />
+          <Card
+            Title={"Thiết bị điện hạ thế"}
+            image={"/image/trainning/tbtdh.jpg"}
+          />
+          <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
+          <Card
+            Title={"CCLink Interface"}
+            image={"/image/trainning/cclink.jpg"}
+          />
+          <Card
+            Title={"Robot Mitsubishi Electric"}
+            image={"/image/trainning/Robot Mitsubishi Electric.jpg"}
+          />
         </VStack>
       ) : (
         <VStack paddingTop={"64px"}>
@@ -101,18 +124,41 @@ const SolutionContainer = () => {
           >
             CHƯƠNG TRÌNH ĐÀO TẠO
           </Text>
-          <HStack
+          <VStack
             display={"flex"}
             justifyContent="space-between"
             width={"1280px"}
             padding="64px 32px 0px 32px"
             data-aos="fade-up"
           >
-            <Card Title={"EMS"} />
-            <Card Title={"BMS"} />
-            <Card Title={"Scada"} />
-            <Card Title={"Alarm Managerment"} />
-          </HStack>
+            <HStack
+              width={"100%"}
+              spacing={"16px"}
+              padding="16px"
+              justifyContent="space-between"
+            >
+              <Card
+                Title={"Thiết bị điện hạ thế"}
+                image={"/image/trainning/tbtdh.jpg"}
+              />
+              <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
+            </HStack>
+            <HStack
+              width={"100%"}
+              spacing={"16px"}
+              padding="16px"
+              justifyContent="space-between"
+            >
+              <Card
+                Title={"CCLink Interface"}
+                image={"/image/trainning/cclink.jpg"}
+              />
+              <Card
+                Title={"Robot Mitsubishi Electric"}
+                image={"/image/trainning/Robot Mitsubishi Electric.jpg"}
+              />
+            </HStack>
+          </VStack>
         </VStack>
       )}
     </VStack>
