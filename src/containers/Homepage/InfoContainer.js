@@ -43,6 +43,8 @@ const InfoContainer = () => {
         padding={"8px"}
         spacing="16px"
         justifyContent={"center"}
+        alignItems={"flex-start"}
+        textAlign={"left"}
         className="CiclePubbleContainer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -70,7 +72,7 @@ const InfoContainer = () => {
             {title}
           </Text>
         </HStack>
-        <Text height={"50%"} fontSize={"14px"}>
+        <Text height={"50%"} fontSize={"14px"} paddingLeft={"8px"}>
           {content}
         </Text>
       </VStack>
@@ -130,7 +132,7 @@ const InfoContainer = () => {
             />
             <CirclePubble
               title={"Giá trị cốt lõi"}
-              // content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+              content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triễn bền vững"
               icon={<Giatricotloi />}
             />
             <CirclePubble
@@ -208,7 +210,7 @@ const InfoContainer = () => {
             <VStack width={"50%"} spacing={"32px"}>
               <CirclePubble
                 title={"Giá trị cốt lõi"}
-                content="Contrary to popular belief, Lorem Ipsum is not simply random text."
+                content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triễn bền vững"
                 icon={<Giatricotloi />}
                 Wicon={<GiatricotloiW />}
               />

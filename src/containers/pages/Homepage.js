@@ -30,7 +30,7 @@ const Homepage = () => {
         alignItems={"center"}
         position={"relative"}
       >
-        <Box
+        {/* <Box
           width={"100%"}
           height={"100%"}
           filter={"brightness(50%)"}
@@ -50,7 +50,7 @@ const Homepage = () => {
           >
             <source src={"video/bgvideo.mp4"} type="video/mp4" />
           </video>
-        </Box>
+        </Box> */}
         <VStack
           className="figure"
           background="linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))"
