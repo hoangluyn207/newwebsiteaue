@@ -102,7 +102,7 @@ const SolutionContainer = () => {
         <VStack width={"100%"} spacing={"16px"} padding="16px">
           <Card
             Title={"Thiết bị điện hạ thế"}
-            image={"/image/trainning/tbtdh.jpg"}
+            image={"/image/aboutus/AnhCty/image.png"}
           />
           <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
           <Card
