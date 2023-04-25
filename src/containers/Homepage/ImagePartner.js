@@ -15,12 +15,6 @@ const ImagePartner = () => {
       url: "/image/partner/crown.jpg",
     },
     {
-      url: "/image/partner/text.jpg",
-    },
-    {
-      url: "/image/partner/3.jpg",
-    },
-    {
       url: "/image/partner/4.jpg",
     },
     {

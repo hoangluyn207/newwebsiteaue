@@ -23,11 +23,10 @@ import TextField from "../../components/TextField";
 import SolutionCardContainer from "../Solution/SolutionCardContainer";
 import { MobileContext } from "../../components/MobileContext";
 import "./PD.css";
-import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 const PD = ({ PDref }) => {
   const { isMobile } = useContext(MobileContext);
-  const Product = ({ Title, img, detailProduct }) => {
+  const Product = ({ Title, img, detailProduct, link }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     // const [isOpen, setIsOpen] = useState(false);
     return (
@@ -35,22 +34,13 @@ const PD = ({ PDref }) => {
         <figure>
           <img src={process.env.PUBLIC_URL + `${img}`} />
         </figure>
-        <Menu isOpen={isOpen}>
-          <MenuButton
-            // onClick={() => setIsOpen(!isOpen)}
-            onMouseEnter={onOpen}
-            onMouseLeave={onClose}
-          >
-            <Text fontSize={"18px"} paddingTop={"8px"}>
-              {!detailProduct || detailProduct.length === 0 ? null : isOpen ? (
-                <ChevronUpIcon />
-              ) : (
-                <ChevronDownIcon />
-              )}{" "}
-              {Title}
-            </Text>
-          </MenuButton>
-          {!detailProduct || detailProduct.length === 0 ? null : (
+        {link === "" ? (
+          <Menu isOpen={isOpen}>
+            <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
+              <Text fontSize={"18px"} paddingTop={"8px"}>
+                {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />} {Title}
+              </Text>
+            </MenuButton>
             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
               {detailProduct.map((item, index) => (
                 <MenuItem
@@ -63,8 +53,14 @@ const PD = ({ PDref }) => {
                 </MenuItem>
               ))}
             </MenuList>
-          )}
-        </Menu>
+          </Menu>
+        ) : (
+          <a href={link} target="_blank">
+            <Text fontSize={"18px"} paddingTop={"8px"}>
+              {Title}
+            </Text>
+          </a>
+        )}
       </VStack>
     );
   };
@@ -181,6 +177,7 @@ const PD = ({ PDref }) => {
               Title={item.Title}
               img={item.img}
               detailProduct={item.Item}
+              link={item.link}
             />
           </GridItem>
         ))}
