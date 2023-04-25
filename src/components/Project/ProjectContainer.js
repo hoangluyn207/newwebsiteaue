@@ -76,6 +76,27 @@ const ProjectContainer = () => {
               justifyContent={"flex-start"}
               backgroundColor="#FFF"
               alignItems="flex-start"
+              position={"relative"}
+              _before={{
+                lineHeight: "50px",
+                position: "absolute",
+                content: '""',
+                bottom: "48px",
+                left: 0,
+                width: "100%",
+                height: "50px",
+                backgroundColor: "#09c",
+                zIndex: "9999",
+                transition: "0.5s",
+                opacity: 0,
+                textColor: "white",
+              }}
+              _hover={{
+                "&::before": {
+                  content: `'${item.Product}'`,
+                  opacity: 1,
+                },
+              }}
             >
               <Box className="Card" width="100%" overflow={"hidden"}>
                 <Image
