@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import FacebookIcon36x36 from "../icons/FacebookIcon36x36.js";
 import ZaloIcon36x36 from "../icons/ZaloIcon36x36.js";
 import EmailIcon36x36 from "../icons/EmailIcon36x36.js";
-import ContactForm from "../containers/AboutUs/ContactForm.js";
+import LinkedIn from "../icons/LinkedIn.js";
+import YoutubeIcon from "../icons/YoutubeIcon.js";
 
 const ContactInfo = (props) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -42,7 +43,7 @@ const ContactInfo = (props) => {
           background={"transparent"}
           icon={<ZaloIcon36x36 />}
         />
-        <IconButton
+        {/* <IconButton
           as="a"
           href="mailto:sales@auevn.com"
           _hover={{
@@ -51,6 +52,28 @@ const ContactInfo = (props) => {
           }}
           background={"transparent"}
           icon={<EmailIcon36x36 />}
+        /> */}
+        <IconButton
+          _hover={{
+            background: "transparent",
+            transform: "translateY(-2px)",
+          }}
+          background={"transparent"}
+          icon={<LinkedIn />}
+          onClick={() => {
+            window.open("https://www.linkedin.com/company/auevn/", "_blank");
+          }}
+        />
+        <IconButton
+          _hover={{
+            background: "transparent",
+            transform: "translateY(-2px)",
+          }}
+          background={"transparent"}
+          icon={<YoutubeIcon />}
+          onClick={() => {
+            window.open("https://www.youtube.com/auevn", "_blank");
+          }}
         />
       </VStack>
     </>

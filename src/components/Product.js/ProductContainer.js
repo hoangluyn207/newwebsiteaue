@@ -11,18 +11,28 @@ import {
 import "./ProductContainer.css";
 import { FiX } from "react-icons/fi";
 import "./ProductContainer";
+import FA from "../../containers/Products/FA";
+import PD from "../../containers/Products/PD";
 
 const ProductContainer = () => {
+  const faRef = useRef(null);
+  const pdRef = useRef(null);
+  const faClick = () => {
+    faRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const pdClick = () => {
+    pdRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <Box
-      className="ProductContainer"
-      width="1280px"
+    <VStack
+      width="full"
       display={"flex"}
       justifyContent="center"
-      paddingTop={"128px"}
       transition={"0.5s"}
+      spacing={"64px"}
     >
-      <HStack width={"full"} justifyContent="space-around">
+      <HStack width={"1280px"} justifyContent="space-around">
         <VStack
           width={"400px"}
           height={"400px"}
@@ -31,6 +41,7 @@ const ProductContainer = () => {
           justifyContent="center"
           transition={"0.5s"}
           alignContent={"space-between"}
+          className="ProductContainer"
         >
           <Box
             width={"full"}
@@ -43,12 +54,7 @@ const ProductContainer = () => {
           </Box>
           <Box display={"flex"}>
             <div className="buttons">
-              <button
-                className="btn"
-                onClick={() => {
-                  window.location.href = "/sanpham/fa";
-                }}
-              >
+              <button className="btn" onClick={faClick}>
                 <span></span>
                 <p
                   data-start="good luck!"
@@ -67,6 +73,7 @@ const ProductContainer = () => {
           display={"flex"}
           justifyContent="center"
           transition={"0.5s"}
+          className="ProductContainer"
         >
           <Box
             width={"full"}
@@ -83,12 +90,7 @@ const ProductContainer = () => {
 
           <Box>
             <div className="buttons">
-              <button
-                className="btn"
-                onClick={() => {
-                  window.location.href = "/sanpham/pd";
-                }}
-              >
+              <button className="btn" onClick={pdClick}>
                 <span></span>
                 <p
                   data-start="good luck!"
@@ -100,7 +102,9 @@ const ProductContainer = () => {
           </Box>
         </VStack>
       </HStack>
-    </Box>
+      <FA FAref={faRef} />
+      <PD PDref={pdRef} />
+    </VStack>
   );
 };
 

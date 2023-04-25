@@ -1,15 +1,19 @@
 import { HStack, Text, Image, Box, VStack } from "@chakra-ui/react";
 import React from "react";
 import ProductContainer from "../../components/Product.js/ProductContainer";
+import FA from "../Products/FA";
+import PD from "../Products/PD";
 
 const Product = () => {
   return (
     <VStack
       width="full"
-      paddingTop={"64px"}
+      paddingTop={"80px"}
       display={"flex"}
       justifyContent="center"
-      paddingBottom={"100px"}
+      paddingBottom={"64px"}
+      spacing={"64px"}
+      margin={"0 !important"}
     >
       <Box width="1280px" display={"flex"} justifyContent="center">
         <HStack spacing={"32px"}>
@@ -39,7 +43,7 @@ const Product = () => {
               và chất lượng tốt nhất.
             </Text>
           </VStack>
-          <Image width={"600px"} src="/image/backgroundProduct.png" />
+          <Image width={"800px"} src="/image/backgroundProduct.png" />
         </HStack>
       </Box>
       <ProductContainer />

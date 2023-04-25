@@ -10,6 +10,7 @@ const Solution = () => {
       display="flex"
       justifyContent={"center"}
       spacing={"32px"}
+      margin={"0 !important"}
       paddingBottom={"100px"}
     >
       <Box

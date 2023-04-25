@@ -117,13 +117,13 @@ const EquipmentContainer = () => {
           <CirclePubble
             link={"fa"}
             title={"Thiết bị tự động hóa"}
-            content="An toàn, độ chính xác cao, dễ sử dụng."
+            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
             icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
           />
           <CirclePubble
             link={"pd"}
-            title={"Thiết bị phân phối điện hạ thê"}
-            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
+            title={"Thiết bị phân phối điện hạ thế"}
+            content="An toàn, độ chính xác cao, dễ sử dụng"
             icon={<PowerDistributon />}
           />
         </VStack>
@@ -138,14 +138,14 @@ const EquipmentContainer = () => {
             link={"fa"}
             ado="fade-right"
             title={"Thiết bị tự động hóa"}
-            content="An toàn, độ chính xác cao, dễ sử dụng"
+            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
             icon={<FA color1={"#0099cc"} color2={"#0099cc"} />}
           />
           <CirclePubble
             link={"pd"}
             ado="fade-left"
-            title={"Thiết bị phân phối điện hạ thê"}
-            content="Tốc độ cao, khả năng xử lý vượt trội, thông minh"
+            title={"Thiết bị phân phối điện hạ thế"}
+            content="An toàn, độ chính xác cao, dễ sử dụng"
             icon={<PowerDistributon />}
           />
         </HStack>

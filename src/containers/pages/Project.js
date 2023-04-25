@@ -4,7 +4,7 @@ import ProjectContainer from "../../components/Project/ProjectContainer";
 
 const Project = () => {
   return (
-    <VStack width={"full"}>
+    <VStack width={"full"} margin={"0 !important"}>
       <Box
         className="ProjectCoverContainer"
         width={"full"}

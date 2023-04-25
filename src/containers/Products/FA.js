@@ -25,7 +25,7 @@ import { MobileContext } from "../../components/MobileContext";
 import "./FA.css";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-const FA = () => {
+const FA = ({ FAref }) => {
   const { isMobile } = useContext(MobileContext);
   const Product = ({ Title, img, detailProduct }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -196,7 +196,7 @@ const FA = () => {
     },
     {
       Title: "SOFTWARE",
-      img: "/image/Product/fa/Software.jpg",
+      img: "/image/Product/fa/Software3.jpg",
       link: "",
       Item: [
         {
@@ -212,7 +212,7 @@ const FA = () => {
   ];
 
   return (
-    <VStack width={"full"} spacing={"64px"}>
+    <VStack width={"full"} spacing={"64px"} ref={FAref}>
       <Box
         className="SolutionCoverContainer"
         width={"full"}
@@ -245,9 +245,9 @@ const FA = () => {
           </Text>
         </VStack>
       </Box>
-      <Text fontSize={"36px"} fontWeight={800} textColor={"#0099cc"}>
+      {/* <Text fontSize={"36px"} fontWeight={800} textColor={"#0099cc"}>
         SẢN PHẨM
-      </Text>
+      </Text> */}
       <Grid
         width={"1280px"}
         templateColumns="repeat(3, 1fr)"

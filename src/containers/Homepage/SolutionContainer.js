@@ -66,16 +66,16 @@ const SolutionContainer = () => {
         data-aos={isMobile ? null : "fade-left"}
         display={"flex"}
         alignItems="flex-start"
-        textAlign={"left"}
-        top="10%"
-        right={isMobile ? null : 0}
+        textAlign={"CENTER"}
+        top="20%"
+        // right={isMobile ? null : 0}
         textColor={"white"}
         width={isMobile ? "100%" : "50%"}
         position={"absolute"}
         paddingLeft="36px"
       >
         <Text fontWeight={"extrabold"} fontSize="36px">
-          GIẢI PHÁP
+          TRUNG TÂM ĐÀO TẠO TỰ ĐỘNG HÓA FASC
         </Text>
         {/* <Text width={isMobile ? "100%" : "60%"}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -92,18 +92,28 @@ const SolutionContainer = () => {
           <Card Title={"Alarm Managerment"} />
         </VStack>
       ) : (
-        <HStack
-          display={"flex"}
-          justifyContent="space-between"
-          width={"1280px"}
-          padding="128px 32px 0px 32px"
-          data-aos="fade-up"
-        >
-          <Card Title={"EMS"} />
-          <Card Title={"BMS"} />
-          <Card Title={"Scada"} />
-          <Card Title={"Alarm Managerment"} />
-        </HStack>
+        <VStack paddingTop={"64px"}>
+          <Text
+            fontSize={"36px"}
+            fontWeight={800}
+            // fontFamily={"'Oswald', sans-serif;"}
+            textColor={"#0099cc"}
+          >
+            CHƯƠNG TRÌNH ĐÀO TẠO
+          </Text>
+          <HStack
+            display={"flex"}
+            justifyContent="space-between"
+            width={"1280px"}
+            padding="64px 32px 0px 32px"
+            data-aos="fade-up"
+          >
+            <Card Title={"EMS"} />
+            <Card Title={"BMS"} />
+            <Card Title={"Scada"} />
+            <Card Title={"Alarm Managerment"} />
+          </HStack>
+        </VStack>
       )}
     </VStack>
   );

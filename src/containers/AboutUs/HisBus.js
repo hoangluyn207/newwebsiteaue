@@ -29,7 +29,7 @@ const HisBus = () => {
           position={"relative"}
           margin={"0px 32px"}
           data-aos="zoom-in"
-          backgroundColor={"#F0F0F0"}
+          backgroundColor={"transparent"}
         >
           <Text
             fontWeight={600}
@@ -60,7 +60,7 @@ const HisBus = () => {
           position={"relative"}
           margin={"0px 32px"}
           data-aos="zoom-in"
-          backgroundColor={"#F0F0F0"}
+          backgroundColor={"transparent"}
         >
           <Text
             fontWeight={600}
@@ -82,7 +82,7 @@ const HisBus = () => {
       <Box
         data-aos="fade-down"
         backgroundColor={"#0099cc"}
-        width={"2px"}
+        width={"1px"}
         height={isMobile ? "50px" : "60px"}
       ></Box>
     );

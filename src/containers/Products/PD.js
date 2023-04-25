@@ -25,7 +25,7 @@ import { MobileContext } from "../../components/MobileContext";
 import "./PD.css";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-const PD = () => {
+const PD = ({ PDref }) => {
   const { isMobile } = useContext(MobileContext);
   const Product = ({ Title, img, detailProduct }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -133,7 +133,7 @@ const PD = () => {
   ];
 
   return (
-    <VStack width={"full"} spacing={"64px"}>
+    <VStack width={"full"} spacing={"64px"} ref={PDref}>
       <Box
         className="SolutionCoverContainer"
         width={"full"}
@@ -166,9 +166,9 @@ const PD = () => {
           </Text>
         </VStack>
       </Box>
-      <Text fontSize={"36px"} fontWeight={800} textColor={"#0099cc"}>
+      {/* <Text fontSize={"36px"} fontWeight={800} textColor={"#0099cc"}>
         SẢN PHẨM
-      </Text>
+      </Text> */}
       <Grid
         width={"1280px"}
         templateColumns="repeat(3, 1fr)"

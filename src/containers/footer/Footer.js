@@ -319,17 +319,20 @@ const Footer = () => {
                   display={"flex"}
                   alignItems="flex-start"
                 >
-                  <Link
-                    to={"/thongtin"}
-                    textColor={"#0099cc"}
-                    paddingBottom="8px"
-                    fontSize="16px"
-                    fontWeight="bold"
-                  >
-                    Giới thiệu
+                  <Link to={"/thongtin"}>
+                    <Text
+                      textColor={"#0099cc"}
+                      paddingBottom="8px"
+                      fontSize="16px"
+                      fontWeight="bold"
+                    >
+                      Giới thiệu
+                    </Text>
                   </Link>
                   <Text>Về chúng tôi</Text>
-                  <Text>Nhân sự</Text>
+                  <Link as={Link} to={"/thongtin#nhansu"}>
+                    Nhân sự
+                  </Link>
                 </VStack>
                 <VStack
                   width={"25%"}
@@ -337,16 +340,22 @@ const Footer = () => {
                   display={"flex"}
                   alignItems="flex-start"
                 >
-                  <Text
-                    textColor={"#0099cc"}
-                    paddingBottom="8px"
-                    fontSize="16px"
-                    fontWeight="bold"
-                  >
-                    Sản phẩm
+                  <Link to={"/sanpham"}>
+                    <Text
+                      textColor={"#0099cc"}
+                      paddingBottom="8px"
+                      fontSize="16px"
+                      fontWeight="bold"
+                    >
+                      Sản phẩm
+                    </Text>
+                  </Link>
+                  <Text as={Link} to={"/sanpham/fa"}>
+                    Thiết bị tự động hóa
                   </Text>
-                  <Text>Thiết bị tự động hóa</Text>
-                  <Text>Thiết bị phân phối điện hạ thế</Text>
+                  <Text as={Link} to={"/sanpham/pd"}>
+                    Thiết bị phân phối điện hạ thế
+                  </Text>
                 </VStack>
 
                 <VStack
@@ -355,14 +364,16 @@ const Footer = () => {
                   display={"flex"}
                   alignItems="flex-start"
                 >
-                  <Text
-                    textColor={"#0099cc"}
-                    paddingBottom="8px"
-                    fontSize="16px"
-                    fontWeight="bold"
-                  >
-                    Giải pháp
-                  </Text>
+                  <Link to={"/giaiphap"}>
+                    <Text
+                      textColor={"#0099cc"}
+                      paddingBottom="8px"
+                      fontSize="16px"
+                      fontWeight="bold"
+                    >
+                      Giải pháp
+                    </Text>
+                  </Link>
                   <Text>Giám sát năng lượng</Text>
                   <Text>Giám sát trạng thái máy</Text>
                   <Text>Giám sát khí nén</Text>
@@ -374,14 +385,16 @@ const Footer = () => {
                   display={"flex"}
                   alignItems="flex-start"
                 >
-                  <Text
-                    textColor={"#0099cc"}
-                    paddingBottom="8px"
-                    fontSize="16px"
-                    fontWeight="bold"
-                  >
-                    Dự án
-                  </Text>
+                  <Link to={"/duan"}>
+                    <Text
+                      textColor={"#0099cc"}
+                      paddingBottom="8px"
+                      fontSize="16px"
+                      fontWeight="bold"
+                    >
+                      Dự án
+                    </Text>
+                  </Link>
                 </VStack>
               </HStack>
             </Box>

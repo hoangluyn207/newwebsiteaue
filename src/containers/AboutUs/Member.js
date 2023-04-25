@@ -7,12 +7,6 @@ import {
   VStack,
   Text,
   Avatar,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
 } from "@chakra-ui/react";
 import Css from "./Member.module.css";
 import FacebookIcon36x36 from "../../icons/FacebookIcon36x36";
@@ -24,14 +18,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Member = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
-
-  const handleImageClick = (src) => {
-    setSelectedImage(src);
-    setShowModal(true);
-  };
-
   useEffect(() => {
     AOS.init({
       duration: 500,
@@ -106,12 +92,7 @@ const Member = () => {
           </VStack>
         ) : (
           <>
-            <Avatar
-              onClick={() => handleImageClick(img)}
-              name={name}
-              src={img}
-              size={"2xl"}
-            />
+            <Avatar name={name} src={img} size={"2xl"} />
 
             {/* <Image
           src={img}
@@ -156,45 +137,8 @@ const Member = () => {
     );
   };
 
-  const BoxCard = () => {
-    return (
-      <Box className={Css.BoxCard} position={"relative"}>
-        <Image
-          className={Css.CardImage}
-          width={"full"}
-          src="/image/member/vu.jpg"
-        />
-        <HStack className={Css.SocialMedia} position={"absolute"} bottom="50px">
-          <IconButton
-            className={`${Css.Icon} ${Css.Icon1}`}
-            background={"transparent"}
-            icon={<FacebookIcon36x36 />}
-          />
-          <IconButton
-            className={`${Css.Icon} ${Css.Icon2}`}
-            background={"transparent"}
-            icon={<LinkedIn />}
-          />
-          <IconButton
-            className={`${Css.Icon} ${Css.Icon3}`}
-            background={"transparent"}
-            icon={<ZaloIcon36x36 />}
-          />
-        </HStack>
-      </Box>
-    );
-  };
   return (
     <>
-      <Modal isOpen={showModal} onClose={() => setShowModal(false)} size="xl">
-        <ModalOverlay css={{ backgroundColor: "rgba(0,0,0,0.5)" }} />
-        <ModalContent>
-          <ModalCloseButton />
-          <ModalBody>
-            <img src={selectedImage} />
-          </ModalBody>
-        </ModalContent>
-      </Modal>
       {isMobile ? (
         <VStack spacing={"32px"} padding={"0px 16px"}>
           <BoxCard2

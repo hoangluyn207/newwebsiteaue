@@ -109,26 +109,26 @@
   color: #0099cc;
 }
 
-.ProductContainer .buttons button:hover:before,
-.ProductContainer .buttons button:hover:after {
+.ProductContainer:hover .buttons button:before,
+.ProductContainer:hover .buttons button:after {
   width: 100%;
 }
 
-.ProductContainer .buttons button:hover span {
+.ProductContainer:hover .buttons button span {
   z-index: 1;
 }
 
-.ProductContainer .buttons button:hover span:before,
-.ProductContainer .buttons button:hover span:after {
+.ProductContainer:hover .buttons button span:before,
+.ProductContainer:hover .buttons button span:after {
   height: 100%;
 }
 
-.ProductContainer .buttons button:hover p:before {
+.ProductContainer:hover .buttons button p:before {
   top: -100%;
   transform: rotate(10deg);
 }
 
-.ProductContainer .buttons button:hover p:after {
+.ProductContainer:hover .buttons button p:after {
   top: 50%;
   transform: translateY(-50%);
 }
@@ -160,12 +160,12 @@
   }
 }
 
-.ProductContainer .buttons button.start:hover:before,
-.ProductContainer .buttons button.start:hover:after {
+.ProductContainer:hover .buttons button.start:before,
+.ProductContainer:hover .buttons button.start:after {
   display: none;
 }
 
-.ProductContainer .buttons button.start:hover span {
+.ProductContainer:hover .buttons button.start span {
   display: none;
 }
 

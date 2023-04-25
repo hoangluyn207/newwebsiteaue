@@ -1,4 +1,4 @@
-import { VStack, Text, Image } from "@chakra-ui/react";
+import { VStack, Text, Image, Box } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,7 @@ import "swiper/css/autoplay";
 import "swiper/css";
 import { MobileContext } from "../../components/MobileContext";
 import "./PartnerContainer.css";
+import ImagePartner from "./ImagePartner";
 
 const PartnerContainer = () => {
   SwiperCore.use([Autoplay]);
@@ -15,10 +16,12 @@ const PartnerContainer = () => {
 
   return (
     <VStack
-      paddingBottom={isMobile ? "32px" : "128px"}
+      paddingBottom={isMobile ? "32px" : "64px"}
       width={"full"}
-      className="my-swiper"
+      className="my-swiper-partner"
+      spacing={"64px"}
     >
+      <ImagePartner />
       <Text
         textColor={"#0099cc"}
         fontWeight="extrabold"
@@ -28,37 +31,37 @@ const PartnerContainer = () => {
       </Text>
       {isMobile ? null : (
         <Swiper
-          className="swiper"
+          className="swiperPn"
           centeredSlides={true}
           slidesPerView={3}
           spaceBetween={30}
           modules={[Autoplay]}
           loop={true}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ delay: 1500 }}
         >
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image
               width={"full"}
               objectFit={"cover"}
               src="/logo/ICONICS_logo.png"
             />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/Kubota-Logo.png" />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/logo.jpg" />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/logorb.png" />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/ptm.png" />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/tge.png" />
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+          <SwiperSlide className="swiperPn-slide">
             <Image objectFit={"cover"} src="/logo/dinco.png" />
           </SwiperSlide>
         </Swiper>

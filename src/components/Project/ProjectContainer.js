@@ -56,7 +56,7 @@ const ProjectContainer = () => {
   ];
 
   return (
-    <Box padding={"32px 0px 128px 0px"} className="ProjecContainerCard">
+    <Box padding={"32px 0px 64px 0px"} className="ProjecContainerCard">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}

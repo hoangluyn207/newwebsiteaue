@@ -17,6 +17,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./AboutUs.css";
 import CheckedIcon from "../../icons/CheckedIcon";
+import ImageCo from "../AboutUs/ImageCo";
 
 const AboutUs = () => {
   const { isMobile } = useContext(MobileContext);
@@ -67,14 +68,16 @@ const AboutUs = () => {
       spacing={isMobile ? "32px" : "128px"}
       width={isMobile ? "100vw" : "full"}
       paddingBottom={"100px"}
+      margin={"0 !important"}
     >
       <VStack spacing={"32px"} width={"full"}>
-        <Image
+        {/* <Image
           src="/image/AboutUs.JPG"
           height={"100vh"}
           objectFit={"cover"}
           width={isMobile ? "100vw" : "full"}
-        />
+        /> */}
+        <ImageCo />
         <Text
           fontSize={isMobile ? "24px" : "36px"}
           textTransform={"uppercase"}
@@ -139,7 +142,11 @@ const AboutUs = () => {
           </HStack>
         )}
       </VStack>
-      <VStack spacing={"32px"} width={isMobile ? "100vw" : "1280px"}>
+      <VStack
+        spacing={"32px"}
+        width={isMobile ? "100vw" : "1280px"}
+        id="nhansu"
+      >
         <Text
           fontSize={isMobile ? "24px" : "36px"}
           textTransform={"uppercase"}
@@ -150,7 +157,7 @@ const AboutUs = () => {
         </Text>
         <Member />
       </VStack>
-      <VStack spacing={"32px"} width={"1280px"}>
+      <VStack spacing={"64px"} width={"1280px"}>
         <Text
           fontSize={isMobile ? "24px" : "36px"}
           textTransform={"uppercase"}
@@ -159,11 +166,33 @@ const AboutUs = () => {
         >
           Chứng nhận
         </Text>
-        <HStack width={"full"}>
-          <VStack width={"50%"}>
-            <Text>AUTHORIZED DISTRIBUTOR CERTIFICATE</Text>
+        <HStack width={"full"} position={"relative"}>
+          <VStack
+            width={"50%"}
+            alignItems={"flex-start"}
+            textAlign={"left"}
+            textColor={"white"}
+            zIndex={1000}
+            padding={"32px"}
+            position={"absolute"}
+          >
+            <Text fontWeight={700}>CHỨNG NHẬN ICONICS</Text>
+            <Text textAlign={"justify"}>
+              AUE Việt Nam vinh hạnh khi được đồng hành với Mitsubishi Electric
+              Việt Nam như một đối tác tích hợp hệ thống độc quyền Về SCADA
+              software-ICONICS Suite™. Là một trong những công ty hàng đầu thế
+              giới trong việc cung cấp giải pháp phần mềm tự động hóa tiên tiến
+              nhất cho nhiều ngành công nghiệp trên toàn cầu. <br />
+              Giải pháp phần mềm của ICONICS bao gồm quản lý trực quan nâng cao,
+              lưu trữ và truy xuất nhanh chóng, phân tích dữ liệu chuyên sâu,
+              khả năng tương thích trên nhiều thiết và tối ưu hóa IIoT/đám mây.
+              <br /> Đặc biệt, những công cụ sáng tạo tích hợp như trực quan
+              hóa, lập lịch sử, phân tích, triển khai và quản lý dữ liệu đám mây
+              theo quy trình và yêu cầu của khách hàng, giúp ICONICS vượt trội
+              hơn so với các đối thủ.
+            </Text>
           </VStack>
-          <Image width={"50%"} src="./image/certificate.jpg" />
+          <Image margin={"0 !important"} src="./image/certificate2.jpg" />
         </HStack>
       </VStack>
       <HStack
