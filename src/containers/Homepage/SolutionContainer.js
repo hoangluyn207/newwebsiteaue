@@ -110,8 +110,8 @@ const SolutionContainer = () => {
             image={"/image/trainning/cclink.jpg"}
           />
           <Card
-            Title={"Robot Mitsubishi Electric"}
-            image={"/image/trainning/Robot Mitsubishi Electric.jpg"}
+            Title={"Robot Mitsubishi"}
+            image={"/image/trainning/Robot Mitsubishi.jpg"}
           />
         </VStack>
       ) : (
@@ -139,7 +139,7 @@ const SolutionContainer = () => {
             >
               <Card
                 Title={"Thiết bị điện hạ thế"}
-                image={"/image/aboutus/AnhCty/image.png"}
+                image={"/image/trainning/tbtdh.jpg"}
               />
               <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
             </HStack>
@@ -154,8 +154,8 @@ const SolutionContainer = () => {
                 image={"/image/trainning/cclink.jpg"}
               />
               <Card
-                Title={"Robot Mitsubishi Electric"}
-                image={"/image/trainning/Robot Mitsubishi Electric.jpg"}
+                Title={"Robot Mitsubishi"}
+                image={"/image/trainning/Robot Mitsubishi.jpg"}
               />
             </HStack>
           </VStack>
