@@ -75,7 +75,7 @@ const PD = ({ PDref }) => {
     {
       Title: "MCCB-ELCB",
       img: "/image/Product/phanphoidien/mccb-elcb.png",
-      link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/lvcb/yn-c-0622/y0622l2209.pdf",
+      link: "https://dl.mitsubishielectric.com/dl/fa/document/catalog/lvcb/yn-c-0720/y0720g2202.pdf",
       Item: [],
     },
     {

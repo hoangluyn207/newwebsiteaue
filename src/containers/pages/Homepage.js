@@ -5,6 +5,7 @@ import InfoContainer from "../Homepage/InfoContainer";
 import PartnerContainer from "../Homepage/PartnerContainer";
 import SolutionContainer from "../Homepage/SolutionContainer";
 import "./HomePage.css";
+import ReactPlayer from "react-player";
 
 const Homepage = () => {
   return (
@@ -30,27 +31,23 @@ const Homepage = () => {
         alignItems={"center"}
         position={"relative"}
       >
-        {/* <Box
+        <Box
           width={"100%"}
           height={"100%"}
           filter={"brightness(50%)"}
           position={"absolute"}
           top={0}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            id="myVideo"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          >
-            <source src={"video/bgvideo.mp4"} type="video/mp4" />
-          </video>
-        </Box> */}
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/1s-uUvvMaDo?controls=0&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Box>
         <VStack
           className="figure"
           background="linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))"
