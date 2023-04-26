@@ -41,7 +41,7 @@ const Homepage = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/1s-uUvvMaDo?controls=0&autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/1s-uUvvMaDo?controls=0&autoplay=1&mute=1&rel=0"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
