@@ -127,12 +127,12 @@ const InfoContainer = () => {
             />
             <CirclePubble
               title={"Nhiệm vụ"}
-              content="Đem nến những giải pháp, những sản phẩm toàn diện, hiệu quả"
+              content="Đem đến những giải pháp, những sản phẩm toàn diện, hiệu quả"
               icon={<Nhiemvu />}
             />
             <CirclePubble
               title={"Giá trị cốt lõi"}
-              content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triễn bền vững"
+              content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triển bền vững"
               icon={<Giatricotloi />}
             />
             <CirclePubble
@@ -176,9 +176,9 @@ const InfoContainer = () => {
               miền đất nước, chúng tôi luôn hướng đến sứ mệnh "Nâng tầm nước
               Việt" bằng việc cung cấp sản phẩm và giải pháp kỹ thuật đạt chuẩn
               quốc tế và đáp ứng nhu cầu của khách hàng trong các ngành công
-              nghiệp.Với sự cam kết và nỗ lực không ngừng, chúng tôi cam kết đem
-              đến cho khách hàng sự hài lòng cao nhất với chất lượng dịch vụ từ
-              các nước G7 được thực hiện bởi đội ngũ kỹ sư Việt Nam đầy nhiệt
+              nghiệp. Với sự cam kết và nỗ lực không ngừng, chúng tôi cam kết
+              đem đến cho khách hàng sự hài lòng cao nhất với chất lượng dịch vụ
+              từ các nước G7 được thực hiện bởi đội ngũ kỹ sư Việt Nam đầy nhiệt
               huyết và năng lượng.
               <br />
               <br />
@@ -202,7 +202,7 @@ const InfoContainer = () => {
               />
               <CirclePubble
                 title={"Nhiệm vụ"}
-                content="Đem nến những giải pháp, những sản phẩm toàn diện, hiệu quả"
+                content="Đem đến những giải pháp, những sản phẩm toàn diện, hiệu quả"
                 icon={<Nhiemvu />}
                 Wicon={<NhiemvuW />}
               />
@@ -210,7 +210,7 @@ const InfoContainer = () => {
             <VStack width={"50%"} spacing={"32px"}>
               <CirclePubble
                 title={"Giá trị cốt lõi"}
-                content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triễn bền vững"
+                content="Trung thực, biết ơn & chia sẻ, trách nhiệm, phát triển bền vững"
                 icon={<Giatricotloi />}
                 Wicon={<GiatricotloiW />}
               />

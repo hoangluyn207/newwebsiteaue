@@ -101,17 +101,17 @@ const SolutionContainer = () => {
       {isMobile ? (
         <VStack width={"100%"} spacing={"16px"} padding="16px">
           <Card
-            Title={"Thiết bị điện hạ thế"}
-            image={"/image/trainning/tbtdh.jpg"}
+            Title={"Đào tạo tổng quan sản phẩm"}
+            image={"/image/Trainning/Tbtdh.jpg"}
           />
-          <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
+          <Card Title={"SCADA"} image={"/image/Trainning/scada.jpg"} />
           <Card
             Title={"CCLink Interface"}
-            image={"/image/trainning/cclink.jpg"}
+            image={"/image/Trainning/cclink.jpg"}
           />
           <Card
-            Title={"Robot Mitsubishi"}
-            image={"/image/trainning/Robot Mitsubishi.jpg"}
+            Title={"Robot Mitsubishi Electric"}
+            image={"/image/Trainning/Robot Mitsubishi.jpg"}
           />
         </VStack>
       ) : (
@@ -138,10 +138,10 @@ const SolutionContainer = () => {
               justifyContent="space-between"
             >
               <Card
-                Title={"Thiết bị điện hạ thế"}
-                image={"/image/trainning/tbtdh.jpg"}
+                Title={"Đào tạo tổng quan sản phẩm"}
+                image={"/image/Trainning/Tbtdh.jpg"}
               />
-              <Card Title={"SCADA"} image={"/image/trainning/scada.jpg"} />
+              <Card Title={"SCADA"} image={"/image/Trainning/scada.jpg"} />
             </HStack>
             <HStack
               width={"100%"}
@@ -150,12 +150,12 @@ const SolutionContainer = () => {
               justifyContent="space-between"
             >
               <Card
-                Title={"CCLink Interface"}
-                image={"/image/trainning/cclink.jpg"}
+                Title={"CC-Link Interface"}
+                image={"/image/Trainning/cclink.jpg"}
               />
               <Card
-                Title={"Robot Mitsubishi"}
-                image={"/image/trainning/Robot Mitsubishi.jpg"}
+                Title={"Robot Mitsubishi Electric"}
+                image={"/image/Trainning/Robot Mitsubishi.jpg"}
               />
             </HStack>
           </VStack>
