@@ -1,12 +1,12 @@
 .my-swiper-partner .swiperPn {
   margin-top: 64px;
   width: 1280px;
-  height: 100px;
+  height: 50px;
 }
 
 .my-swiper-partner .swiperPn .swiperPn-slide {
-  width: 50px;
-  height: 100px;
+  width: 30px;
+  height: 50px;
   z-index: 2;
   text-align: center;
   font-size: 18px;
@@ -21,7 +21,7 @@
 
 .my-swiper-partner .swiperPn .swiperPn-slide img {
   width: 100%;
-  height: 100px;
+  height: 50px;
   display: block;
   object-fit: contain;
   filter: grayscale(100%);

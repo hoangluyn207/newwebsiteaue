@@ -33,7 +33,7 @@ const PartnerContainer = () => {
         <Swiper
           className="swiperPn"
           centeredSlides={true}
-          slidesPerView={3}
+          slidesPerView={5}
           spaceBetween={30}
           modules={[Autoplay]}
           loop={true}

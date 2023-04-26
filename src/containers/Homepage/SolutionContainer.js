@@ -111,7 +111,7 @@ const SolutionContainer = () => {
           />
           <Card
             Title={"Robot Mitsubishi Electric"}
-            image={"/image/Trainning/Robot Mitsubishi.jpg"}
+            image={"/image/Trainning/Robot Mitsubishi Electric.jpg"}
           />
         </VStack>
       ) : (
@@ -155,7 +155,7 @@ const SolutionContainer = () => {
               />
               <Card
                 Title={"Robot Mitsubishi Electric"}
-                image={"/image/Trainning/Robot Mitsubishi.jpg"}
+                image={"/image/Trainning/Robot Mitsubishi Electric.jpg"}
               />
             </HStack>
           </VStack>
