@@ -12,7 +12,7 @@ import { Image, Box } from "@chakra-ui/react";
 const ImagePartner = () => {
   const PartNerData = [
     {
-      url: "/image/aboutus/AnhCty/aboutus.jpg",
+      url: "/image/aboutus/AnhCty/AboutUs.JPG",
     },
     {
       url: "/image/aboutus/AnhCty/image (1).png",
